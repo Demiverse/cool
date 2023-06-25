@@ -11,9 +11,11 @@
   object-fit: cover;
 }
 .bgIcon {
-  top: 183px;
+  top: 218px;
   left: 0;
   height: 922px;
+  filter: blur(5px) brightness(50%);
+  opacity: 70%;
 }
 .divIcon {
   top: 202px;
@@ -156,8 +158,8 @@
   position: absolute;
 }
 .div8 {
-  top: 979px;
-  left: 1612px;
+  top: 313px;
+  left: 358px;
   line-height: 120%;
 }
 .divIcon1 {
@@ -167,7 +169,19 @@
   height: 25px;
   object-fit: cover;
 }
-.arrowlefthighlighted1Icon,
+.arrowlefthighlighted1Icon {
+  position: absolute;
+  top: 606px;
+  left: 1535px;
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  cursor: pointer;
+  transform: scale(-1, 1);
+}
+.arrowlefthighlighted1Icon:hover {
+  background-image: url("/public/arrowlefthighlighted-1@2x.png");
+}
 .arrowleftnormal1Icon {
   position: absolute;
   top: 606px;
@@ -176,6 +190,9 @@
   height: 128px;
   object-fit: cover;
   cursor: pointer;
+}
+.arrowleftnormal1Icon:hover {
+  background-image: url("/public/arrowlefthighlighted-1@2x.png");
 }
 .arrowleftnormal1Icon {
   top: 598px;

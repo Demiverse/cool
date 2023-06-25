@@ -97,11 +97,13 @@ const FrameComponent5: FunctionComponent = () => {
       <div className={styles.wrapper}>
         <div className={styles.div7}>
           <img className={styles.icons} alt="" src="/icons4.svg" />
-          <div className={styles.div8}>Назад на сайт</div>
+          <div className={styles.div8}>
+              <a href="https://alloder.ru">Назад на сайт</a>
+          </div>
         </div>
       </div>
+        <img className={styles.frameChild} alt="" src="/rectangle-22@2x.png" />
     </div>
   );
 };
-
 export default FrameComponent5;

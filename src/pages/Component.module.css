@@ -107,9 +107,10 @@
 .child {
   top: 98px;
   left: calc(50% - 336px);
-  width: 672px;
-  height: 303px;
+  width: 718px;
+  height: 581px;
   object-fit: cover;
+  pointer-events: none;
 }
 .buttonbuylevelnormal2Icon {
   position: absolute;

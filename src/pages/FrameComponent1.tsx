@@ -15,7 +15,7 @@ const FrameComponent1: FunctionComponent = () => {
   return (
     <div className={styles.f32Parent}>
       <img className={styles.f32Icon} alt="" src="/f-3-2@2x.png" />
-      <img className={styles.bgIcon} alt="" src="/bg1@2x.png" />
+      <img className={styles.bgIcon} alt="" src="/bg1@2x.jpg" />
       <img className={styles.divIcon} alt="" src="/div@2x.png" />
       <div className={styles.header}>
         <div className={styles.logoParent}>
@@ -53,22 +53,16 @@ const FrameComponent1: FunctionComponent = () => {
         </div>
       </div>
       <img className={styles.icon} alt="" src="/1@2x.png" />
-      <div className={styles.div6}>Смеяна</div>
+      <div className={styles.div6}>Антуанетта</div>
       <div className={styles.div7}>
-        Врождённые знания о вселенной — одно из самых удивительных качеств расы
-        аэдов. Они приходят в этот мир, имея взрослое тело и впечатляющий багаж
-        знаний. Невероятно, но аэды способны вспоминать о событиях, которые
-        произошли задолго до возникновения их вида. Должно быть, именно поэтому
-        медитации так популярны у этого народа: держи разум в покое, стремись
-        к гармонии, и вселенная сама раскроет для тебя двери к своим самым
-        сокровенным тайнам.
+          Антуанетта — нынешняя королева эльфов, избранная посредством голосования на Великом Балу в 1020 году. Элегантная, импозантная, раскованная последовательница гедонизма всегда рада новым знакомствам. Её познания дипломатического искусства действительно дают свои результаты, а уж для героя Сарнаута точно найдётся минутка, чтобы преподать самый важный урок в его жизни.
       </div>
-      <div className={styles.div8}>Художник</div>
+      <div className={styles.div8}>Художник: Opium Witch</div>
       <img className={styles.divIcon1} alt="" src="/div@2x.png" />
       <img
         className={styles.arrowlefthighlighted1Icon}
         alt=""
-        src="/arrowlefthighlighted-1@2x.png"
+        src="/arrowleftnormal-1@2x.png"
         onClick={onArrowLeftHighlighted1ImageClick}
       />
       <img
@@ -79,12 +73,16 @@ const FrameComponent1: FunctionComponent = () => {
       />
       <div className={styles.div9}>
         <img className={styles.icons} alt="" src="/icons4.svg" />
-        <div className={styles.div10}>Назад</div>
+        <div className={styles.div10}>
+            <a href="http://localhost:3000/frame-285">Назад к персонажам</a>
+        </div>
       </div>
       <div className={styles.wrapper}>
         <div className={styles.div11}>
           <img className={styles.icons} alt="" src="/icons4.svg" />
-          <div className={styles.div10}>Назад на сайт</div>
+          <div className={styles.div10}>
+              <a href="https://alloder.ru">Назад на сайт</a>
+          </div>
         </div>
       </div>
       <img className={styles.frameChild} alt="" src="/rectangle-22@2x.png" />

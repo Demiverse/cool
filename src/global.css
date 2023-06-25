@@ -3,6 +3,7 @@
 body {
   margin: 0;
   line-height: normal;
+  overflow: hidden;
 }
 :root {
   /* fonts */
@@ -34,4 +35,9 @@ body {
 
   /* border radiuses */
   --br-10xs: 3px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }

@@ -162,11 +162,12 @@
 }
 .frameChild {
   position: absolute;
-  top: 60px;
+  top: 4px;
   left: calc(50% - 209px);
-  background-color: #d9d9d9;
   width: 419px;
-  height: 65px;
+  height: 189px;
+  object-fit: cover;
+  pointer-events: none;
 }
 .buttonbuylevelnormal2Icon {
   position: absolute;

@@ -46,7 +46,7 @@ const Component: FunctionComponent = () => {
           </div>
         </div>
       </div>
-      <img className={styles.child} alt="" src="/rectangle-221@2x.png" />
+      <img className={styles.child} alt="" src="/gorizontalnoe_logo_zoloto.png" />
       <div className={styles.buttonbuylevelnormal2Parent}>
         <img
           className={styles.buttonbuylevelnormal2Icon}
@@ -55,8 +55,6 @@ const Component: FunctionComponent = () => {
         />
         <div className={styles.div7}>Играть</div>
       </div>
-      <img className={styles.item} alt="" src="/vector-1.svg" />
-      <img className={styles.inner} alt="" src="/vector-2.svg" />
       <img
         className={styles.icon}
         alt=""
