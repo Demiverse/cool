@@ -9,7 +9,6 @@ import FrameComponent from "./pages/FrameComponent";
 import FrameComponent1 from "./pages/FrameComponent1";
 import FrameComponent2 from "./pages/FrameComponent2";
 import FrameComponent3 from "./pages/FrameComponent3";
-import FrameComponent4 from "./pages/FrameComponent4";
 import FrameComponent5 from "./pages/FrameComponent5";
 import { useEffect } from "react";
 
@@ -80,7 +79,6 @@ function App() {
       <Route path="/frame-282" element={<FrameComponent1 />} />
       <Route path="/frame-281" element={<FrameComponent2 />} />
       <Route path="/frame-280" element={<FrameComponent3 />} />
-      <Route path="/frame-284" element={<FrameComponent4 />} />
       <Route path="/frame-285" element={<FrameComponent5 />} />
     </Routes>
   );
