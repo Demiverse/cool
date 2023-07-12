@@ -1,7 +1,10 @@
 .f32Icon {
+  position: absolute;
   top: 0;
   left: 0;
-  height: 1225px;
+  width: 1920px;
+  height: 1205px;
+  object-fit: cover;
 }
 .bgIcon,
 .divIcon,
@@ -13,14 +16,21 @@
 .bgIcon {
   top: 218px;
   left: 0;
-  height: 922px;
+  height: 850px;
   filter: blur(5px) brightness(50%);
   opacity: 70%;
+  pointer-events: none;
+  animation: ani 0.5s forwards;
+}
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 .divIcon {
   top: 202px;
-  left: calc(50% - 960px);
+  left: calc(50% - 962px);
   height: 25px;
+  pointer-events: none;
 }
 .logoIcon {
   width: 150px;
@@ -132,6 +142,13 @@
   width: 777px;
   height: 933px;
   object-fit: cover;
+  pointer-events: none;
+  opacity: 0;
+  animation: ani 1s forwards;
+}
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 .div6,
 .div7 {
@@ -164,12 +181,16 @@
 }
 .divIcon1 {
   top: 1055px;
-  left: calc(50% - 960px);
+  left: calc(50% - 962px);
   width: 1920px;
   height: 25px;
   object-fit: cover;
+  pointer-events: none;
 }
 .arrowlefthighlighted1Icon {
+  background-image: url("/public/arrowleftnormal-1@2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   position: absolute;
   top: 606px;
   left: 1535px;
@@ -178,8 +199,18 @@
   object-fit: cover;
   cursor: pointer;
   transform: scale(-1, 1);
+  transition: all 1s ease-in-out;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation: spinAndZoom 1s 1;
+}
+.arrowlefthighlighted1Icon:hover {
+  background-image: url("/public/arrowlefthighlighted-1@2x.png");
 }
 .arrowleftnormal1Icon {
+  background-image: url("/public/arrowleftnormal-1@2x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
   top: 606px;
   left: 1535px;
@@ -187,9 +218,16 @@
   height: 128px;
   object-fit: cover;
   cursor: pointer;
+  transition: all 1s ease-in-out;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation: spinAndZoom 1s 1;
+}
+.arrowleftnormal1Icon:hover {
+  background-image: url("/public/arrowlefthighlighted-1@2x.png");
 }
 .arrowleftnormal1Icon {
-  top: 598px;
+  top: 606px;
   left: 990px;
 }
 .div10 {
@@ -232,11 +270,12 @@
   width: 419px;
   height: 189px;
   object-fit: cover;
+  pointer-events: none;
 }
 .f32Parent {
-  position: relative;
+  position: absolute;
   width: 100%;
-  height: 1276px;
+  height: 100%;
   overflow: hidden;
   background-image: url(/public/frame-283@3x.png);
   background-size: cover;
@@ -246,4 +285,18 @@
   font-size: var(--h6-desktop-size);
   color: var(--light-100);
   font-family: var(--h6-desktop);
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.f32Child{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -143px;
+  right: -20px;
+  overflow: scroll;
 }

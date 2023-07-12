@@ -1,6 +1,7 @@
-import { FunctionComponent, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import {FunctionComponent, useCallback, useLayoutEffect, useRef} from "react";
+import {Link, useNavigate} from "react-router-dom";
 import styles from "./FrameComponent2.module.css";
+import {useScroll} from "../hooks/useScroll";
 const FrameComponent2: FunctionComponent = () => {
   const navigate = useNavigate();
 
@@ -12,8 +13,15 @@ const FrameComponent2: FunctionComponent = () => {
     navigate("/frame-280");
   }, [navigate]);
 
+    const ref = useRef<HTMLDivElement>(null)
+    const scroll = useScroll(ref);
+    useLayoutEffect(() => {
+        if (ref.current)ref.current.scrollTop = scroll;
+    }, []);
+
   return (
     <div className={styles.f32Parent}>
+        <div ref={ref} className={styles.f32Child}>
       <img className={styles.f32Icon} alt="" src="/f-3-21@2x.png" />
       <img className={styles.bgIcon} alt="" src="/bg2@2x.jpg" />
       <img className={styles.divIcon} alt="" src="/div@2x.png" />
@@ -59,22 +67,18 @@ const FrameComponent2: FunctionComponent = () => {
       </div>
       <div className={styles.div8}>Художник: аNон</div>
       <img className={styles.divIcon1} alt="" src="/div@2x.png" />
-      <img
+      <div
         className={styles.arrowlefthighlighted1Icon}
-        alt=""
-        src="/arrowleftnormal-1@2x.png"
         onClick={onArrowLeftHighlighted1ImageClick}
       />
-      <img
+      <div
         className={styles.arrowleftnormal1Icon}
-        alt=""
-        src="/arrowleftnormal-1@2x.png"
         onClick={onArrowLeftNormal1ImageClick}
       />
       <div className={styles.div9}>
         <img className={styles.icons} alt="" src="/icons4.svg" />
         <div className={styles.div10}>
-            <a href="http://localhost:3000/frame-285">Назад к персонажам</a>
+            <Link to="/frame-285">Назад к персонажам</Link>
         </div>
       </div>
       <div className={styles.wrapper}>
@@ -86,6 +90,7 @@ const FrameComponent2: FunctionComponent = () => {
         </div>
       </div>
       <img className={styles.frameChild} alt="" src="/rectangle-22@2x.png" />
+        </div>
     </div>
   );
 };

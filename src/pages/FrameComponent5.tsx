@@ -1,6 +1,7 @@
-import { FunctionComponent, useCallback } from "react";
+import {FunctionComponent, useCallback, useEffect, useLayoutEffect, useRef} from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./FrameComponent5.module.css";
+import {useScroll} from "../hooks/useScroll";
 const FrameComponent5: FunctionComponent = () => {
   const navigate = useNavigate();
 
@@ -20,9 +21,16 @@ const FrameComponent5: FunctionComponent = () => {
     navigate("/frame-280");
   }, [navigate]);
 
+    const ref = useRef<HTMLDivElement>(null)
+    const scroll = useScroll(ref);
+    useLayoutEffect(() => {
+        if (ref.current)ref.current.scrollTop = scroll;
+    }, []);
+
   return (
     <div className={styles.f32Parent}>
-      <img className={styles.f32Icon} alt="" src="/f-3-23@2x.png" />
+        <div ref={ref} className={styles.f32Child}>
+      <img className={styles.f32Icon} alt="" src="/f-3-21@2x.png" />
       <img className={styles.bgIcon} alt="" src="/bg4@2x.png" />
       <div className={styles.header}>
         <div className={styles.logoParent}>
@@ -103,7 +111,8 @@ const FrameComponent5: FunctionComponent = () => {
         </div>
       </div>
         <img className={styles.frameChild} alt="" src="/rectangle-22@2x.png" />
-    </div>
+        </div>
+      </div>
   );
 };
 export default FrameComponent5;
