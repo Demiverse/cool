@@ -2,8 +2,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 2016px;
-  height: 1139px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 .logoIcon {
@@ -12,13 +12,6 @@
   height: 46.08px;
   object-fit: cover;
 }
-.icons {
-  position: relative;
-  width: 16px;
-  height: 16px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
 .parentMenuItem {
   display: flex;
   flex-direction: row;
@@ -26,18 +19,6 @@
   justify-content: flex-start;
   gap: var(--gap-5xs);
   color: var(--secondary-100);
-}
-.allodswikiru {
-  position: relative;
-  text-transform: uppercase;
-}
-.logoParent,
-.menu {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: var(--gap-13xl);
 }
 .logoParent {
   justify-content: flex-start;
@@ -87,30 +68,15 @@
   gap: var(--gap-13xl);
   z-index: 2;
 }
-.child,
-.header {
-  position: absolute;
-}
-.header {
-  top: 0;
-  left: 0;
-  background-color: var(--primary-60);
-  width: 1920px;
-  height: 80px;
-  display: none;
-  flex-direction: row;
-  padding: var(--padding-base) var(--padding-29xl);
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: space-between;
-}
 .child {
-  top: 98px;
-  left: calc(50% - 336px);
-  width: 718px;
-  height: 581px;
+  position: absolute;
+  width: 720px;
+  left: 50%;
+  top: 162px;
   object-fit: cover;
   pointer-events: none;
+  transform: translateX(-50%);
+  max-width: 85%;
 }
 .buttonbuylevelnormal2Icon {
   position: absolute;
@@ -119,12 +85,6 @@
   width: 141px;
   height: 41px;
   object-fit: cover;
-}
-.div7 {
-  position: absolute;
-  top: 9px;
-  left: 37px;
-  line-height: 120%;
 }
 .buttonbuylevelnormal2Parent {
   position: absolute;
@@ -156,7 +116,7 @@
 }
 .icon {
   top: 595px;
-  left: calc(50% - 128px);
+  left: calc(50% - -521px);
   width: 220px;
   height: 191px;
   object-fit: cover;
@@ -180,4 +140,88 @@
   font-size: var(--text-normal-size);
   color: var(--light-100);
   font-family: var(--text-normal);
+}
+.text {
+  position: absolute;
+  width: 721px;
+  height: 300px;
+  left: 50%;
+  top: 377px;
+  transform: translateX(-50%);
+  font-family: AllodsWest;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  align-items: center;
+  color: #FFFFFF;
+  line-height: 120%;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  max-width: 85%;
+}
+.preloader {
+  width: 100%;
+  position: relative;
+  -webkit-animation: slideIn 0.7s forwards;
+  -moz-animation: slideIn 0.7s forwards;
+  animation: slideIn 0.7s forwards;
+}
+@-webkit-keyframes slideIn {
+  0% {
+    transform: translateX(-900px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-moz-keyframes slideIn {
+  0% {
+    transform: translateX(-900px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(-900px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.preloader2 {
+  width: 100%;
+  position: relative;
+  -webkit-animation: slideIn2 0.7s forwards;
+  -moz-animation: slideIn2 0.7s forwards;
+  animation: slideIn2 0.7s forwards;
+}
+@-webkit-keyframes slideIn2 {
+  0% {
+    transform: translateX(900px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-moz-keyframes slideIn2 {
+  0% {
+    transform: translateX(900px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideIn2 {
+  0% {
+    transform: translateX(900px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

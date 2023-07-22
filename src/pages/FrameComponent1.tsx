@@ -22,7 +22,7 @@ const FrameComponent1: FunctionComponent = () => {
   return (
     <div className={styles.f32Parent}>
         <div ref={ref} className={styles.f32Child}>
-      <img className={styles.f32Icon} alt="" src="/f-3-21@2x.png" />
+      <img className={styles.f32Icon} alt="" src="/f-3-22@2x.png" />
       <img className={styles.bgIcon} alt="" src="/bg1@2x.jpg" />
       <img className={styles.divIcon} alt="" src="/div@2x.png" />
       <div className={styles.header}>
@@ -60,7 +60,10 @@ const FrameComponent1: FunctionComponent = () => {
           </div>
         </div>
       </div>
+            <img className={styles.frameChild} alt="" src="/rectangle-22@2x.png" />
+            <div className={styles.preloader}>
       <img className={styles.icon} alt="" src="/1@2x.png" />
+            </div>
       <div className={styles.div6}>Антуанетта</div>
       <div className={styles.div7}>
           Антуанетта — нынешняя королева эльфов, избранная посредством голосования на Великом Балу в 1020 году. Элегантная, импозантная, раскованная последовательница гедонизма всегда рада новым знакомствам. Её познания дипломатического искусства действительно дают свои результаты, а уж для героя Сарнаута точно найдётся минутка, чтобы преподать самый важный урок в его жизни.
@@ -89,7 +92,6 @@ const FrameComponent1: FunctionComponent = () => {
           </div>
         </div>
       </div>
-      <img className={styles.frameChild} alt="" src="/rectangle-22@2x.png" />
         </div>
     </div>
   );

@@ -1,0 +1,71 @@
+.header {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2rem 3rem;
+}
+.div7 {
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--gap-9xs);
+    line-height: 120%;
+}
+.div8 {
+    position: relative;
+    line-height: 120%;
+    font-family: AllodsWest;
+    font-size: 20px;
+}
+.link {
+    color: rgba(196, 196, 196, 0.7);
+    position: relative;
+    font-family: AllodsWest;
+    font-size: 20px;
+    line-height: 120%;
+    text-indent: 20px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.link a {
+    color: rgba(196, 196, 196, 0.7);
+    text-decoration: none;
+}
+.link:hover {
+    color: white;
+}
+.link.active {
+    color: white;
+}
+.link.disabled {
+    color: white;
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-13xl);
+}
+.icons {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.header[data-center="true"] {
+    justify-content: center;
+}

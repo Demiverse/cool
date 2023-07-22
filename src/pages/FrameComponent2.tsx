@@ -22,7 +22,7 @@ const FrameComponent2: FunctionComponent = () => {
   return (
     <div className={styles.f32Parent}>
         <div ref={ref} className={styles.f32Child}>
-      <img className={styles.f32Icon} alt="" src="/f-3-21@2x.png" />
+      <img className={styles.f32Icon} alt="" src="/f-3-22@2x.png" />
       <img className={styles.bgIcon} alt="" src="/bg2@2x.jpg" />
       <img className={styles.divIcon} alt="" src="/div@2x.png" />
       <div className={styles.header}>
@@ -60,7 +60,10 @@ const FrameComponent2: FunctionComponent = () => {
           </div>
         </div>
       </div>
+            <img className={styles.frameChild} alt="" src="/rectangle-22@2x.png" />
+            <div className={styles.preloader}>
       <img className={styles.icon} alt="" src="/2@2x.png" />
+            </div>
       <div className={styles.div6}>Найан</div>
       <div className={styles.div7}>
           Эрудированный историк, обладатель древнейших артефактов, наследник королевского рода и один из самых долгоживущих эльфов. Имя ему — Найан ди Дернье. Лишь немногие в Сарнауте могут посоревноваться с его кладезем знаний. Он был свидетелем разрушительного Катаклизма, наблюдал за основанием целых государств и повстречал множество людей, сыгравших важную роль в истории Сарнаута. Но кто-то сыграл важную роль именно в его жизни, оставив глубокий отпечаток в душе.
@@ -89,7 +92,6 @@ const FrameComponent2: FunctionComponent = () => {
           </div>
         </div>
       </div>
-      <img className={styles.frameChild} alt="" src="/rectangle-22@2x.png" />
         </div>
     </div>
   );
