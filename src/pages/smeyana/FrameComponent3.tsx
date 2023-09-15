@@ -1,8 +1,8 @@
 import React, { FunctionComponent, useCallback, useLayoutEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./FrameComponent3.module.css";
-import { useScroll } from "../hooks/useScroll";
-import { Header } from "../components/header/header";
+import { useScroll } from "../../hooks/useScroll";
+import { Header } from "../../components/header/header";
 const FrameComponent3: FunctionComponent = () => {
 	const navigate = useNavigate();
 

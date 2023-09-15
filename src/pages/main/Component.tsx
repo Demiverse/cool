@@ -1,7 +1,7 @@
 import { FunctionComponent, useCallback } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./Component.module.css";
-import { Header } from "../components/header/header";
+import { Header } from "../../components/header/header";
 
 const Component: FunctionComponent = () => {
 	const navigate = useNavigate();

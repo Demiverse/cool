@@ -1,11 +1,11 @@
 import React, { FunctionComponent, useCallback, useEffect, useLayoutEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./FrameComponent.module.css";
-import { useScrollContext } from "../components/scrollcontext";
-import { useScroll } from "../hooks/useScroll";
-import { Header } from "../components/header/header";
-import style from "../components/button/style.module.css";
-import { clsx } from "../utils/utils";
+import { useScrollContext } from "../../components/scrollcontext";
+import { useScroll } from "../../hooks/useScroll";
+import { Header } from "../../components/header/header";
+import style from "../../components/button/style.module.css";
+import { clsx } from "../../utils/utils";
 
 const FrameComponent: FunctionComponent = () => {
 	const navigate = useNavigate();

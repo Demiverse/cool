@@ -1,17 +1,17 @@
 import React, { FunctionComponent, useCallback, useLayoutEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import styles from "./FrameComponent1.module.css";
-import { useScroll } from "../hooks/useScroll";
-import { Header } from "../components/header/header";
-const FrameComponent1: FunctionComponent = () => {
+import styles from "./FrameComponent2.module.css";
+import { useScroll } from "../../hooks/useScroll";
+import { Header } from "../../components/header/header";
+const FrameComponent2: FunctionComponent = () => {
 	const navigate = useNavigate();
 
 	const onArrowLeftHighlighted1ImageClick = useCallback(() => {
-		navigate("/frame-283");
+		navigate("/frame-282");
 	}, [navigate]);
 
 	const onArrowLeftNormal1ImageClick = useCallback(() => {
-		navigate("/frame-281");
+		navigate("/frame-280");
 	}, [navigate]);
 
 	const ref = useRef<HTMLDivElement>(null);
@@ -24,7 +24,7 @@ const FrameComponent1: FunctionComponent = () => {
 		<div className={styles.f32Parent}>
 			<div ref={ref} className={styles.f32Child}>
 				<img className={styles.background} alt="" src="/f-3-22@2x.png" />
-				<img className={styles.bgIcon} alt="" src="/bg1@2x.jpg" />
+				<img className={styles.bgIcon} alt="" src="/bg2@2x.jpg" />
 				<img className={styles.divIcon} alt="" src="/div@2x.png" />
 				<div className={styles.header}>
 					<div className={styles.logoParent}>
@@ -63,16 +63,17 @@ const FrameComponent1: FunctionComponent = () => {
 				</div>
 				<img className={styles.frameChild} alt="" src="/rectangle-22@2x.png" />
 				<div className={styles.preloader}>
-					<img className={styles.ant} alt="" src="/1@2x.png" />
+					<img className={styles.ant} alt="" src="/2@2x.png" />
 				</div>
-				<div className={styles.div6}>Антуанетта</div>
+				<div className={styles.div6}>Найан</div>
 				<div className={styles.div7}>
-					Антуанетта — нынешняя королева эльфов, избранная посредством голосования на Великом Балу в 1020
-					году. Элегантная, импозантная, раскованная последовательница гедонизма всегда рада новым
-					знакомствам. Её познания дипломатического искусства действительно дают свои результаты, а уж для
-					героя Сарнаута точно найдётся минутка, чтобы преподать самый важный урок в его жизни.
+					Эрудированный историк, обладатель древнейших артефактов, наследник королевского рода и один из самых
+					долгоживущих эльфов. Имя ему — Найан ди Дернье. Лишь немногие в Сарнауте могут посоревноваться с его
+					кладезем знаний. Он был свидетелем разрушительного Катаклизма, наблюдал за основанием целых
+					государств и повстречал множество людей, сыгравших важную роль в истории Сарнаута. Но кто-то сыграл
+					важную роль именно в его жизни, оставив глубокий отпечаток в душе.
 				</div>
-				<div className={styles.div8}>Художник: Opium Witch</div>
+				<div className={styles.div8}>Художник: аNон</div>
 				<img className={styles.divIcon1} alt="" src="/div@2x.png" />
 				<div className={styles.arrowlefthighlighted1Icon} onClick={onArrowLeftHighlighted1ImageClick} />
 				<div className={styles.arrowleftnormal1Icon} onClick={onArrowLeftNormal1ImageClick} />
@@ -88,4 +89,4 @@ const FrameComponent1: FunctionComponent = () => {
 	);
 };
 
-export default FrameComponent1;
+export default FrameComponent2;

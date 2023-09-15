@@ -1,8 +1,8 @@
 import React, { FunctionComponent, useCallback, useEffect, useLayoutEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./FrameComponent5.module.css";
-import { useScroll } from "../hooks/useScroll";
-import { Header } from "../components/header/header";
+import { useScroll } from "../../hooks/useScroll";
+import { Header } from "../../components/header/header";
 
 // fixme: абсолюты,топ,лефт,сделать декор плашки дивами (background-repeat: X)
 const FrameComponent5: FunctionComponent = () => {

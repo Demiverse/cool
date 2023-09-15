@@ -1,10 +1,10 @@
 import { Routes, Route, useNavigationType, useLocation } from "react-router-dom";
-import Component from "./pages/Component";
-import FrameComponent from "./pages/FrameComponent";
-import FrameComponent1 from "./pages/FrameComponent1";
-import FrameComponent2 from "./pages/FrameComponent2";
-import FrameComponent3 from "./pages/FrameComponent3";
-import FrameComponent5 from "./pages/FrameComponent5";
+import Component from "./pages/main/Component";
+import FrameComponent from "./pages/yasker/FrameComponent";
+import FrameComponent1 from "./pages/ann/FrameComponent1";
+import FrameComponent2 from "./pages/nayan/FrameComponent2";
+import FrameComponent3 from "./pages/smeyana/FrameComponent3";
+import FrameComponent5 from "./pages/persons/FrameComponent5";
 import { useEffect } from "react";
 import { ScrollProvider, WithScroll } from "./components/scrollcontext";
 
