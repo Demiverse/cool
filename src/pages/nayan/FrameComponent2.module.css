@@ -1,4 +1,4 @@
-.pageBackground {
+.background {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -6,14 +6,14 @@
 	height: 1206px;
 	object-fit: cover;
 }
-.containerBackground,
-.topBorder,
-.pageBackground {
+.bgIcon,
+.divIcon,
+.background {
 	position: absolute;
 	width: 2016px;
 	object-fit: cover;
 }
-.containerBackground {
+.bgIcon {
 	top: 218px;
 	left: 0;
 	height: 850px;
@@ -30,7 +30,7 @@
 		opacity: 1;
 	}
 }
-.topBorder {
+.divIcon {
 	top: 202px;
 	left: calc(50% - 962px);
 	height: 25px;
@@ -158,13 +158,13 @@
 		opacity: 1;
 	}
 }
-.buttonText,
+.div6,
 .div7 {
 	left: 357px;
 	display: flex;
 	align-items: center;
 }
-.buttonText {
+.div6 {
 	position: absolute;
 	top: 440px;
 	font-size: var(--h1-desktop-size);
@@ -179,7 +179,7 @@
 }
 .div7,
 .div8,
-.bottomBorder {
+.divIcon1 {
 	position: absolute;
 }
 .div8 {
@@ -187,7 +187,7 @@
 	left: 358px;
 	line-height: 120%;
 }
-.bottomBorder {
+.divIcon1 {
 	top: 1055px;
 	left: calc(50% - 962px);
 	width: 1920px;
@@ -279,7 +279,7 @@
 	object-fit: cover;
 	pointer-events: none;
 }
-.page {
+.f32Parent {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -299,7 +299,7 @@
 	-o-user-select: none;
 	user-select: none;
 }
-.content {
+.f32Child {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -307,7 +307,7 @@
 	right: -20px;
 	overflow: scroll;
 }
-.content {
+.preloader {
 	width: 100%;
 	position: relative;
 	-webkit-animation: slideIn 0.7s forwards;
