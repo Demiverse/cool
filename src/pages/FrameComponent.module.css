@@ -1,4 +1,4 @@
-.f32Icon {
+.background {
   position: absolute;
   top: 0;
   left: 0;
@@ -8,7 +8,7 @@
 }
 .bgIcon,
 .divIcon,
-.f32Icon {
+.background {
   position: absolute;
   width: 2016px;
   object-fit: cover;
@@ -37,13 +37,9 @@
   height: 46.08px;
   object-fit: cover;
 }
-.div,
 .icons,
 .logoIcon {
   position: relative;
-}
-.div {
-  text-transform: uppercase;
 }
 .icons {
   width: 16px;
@@ -117,7 +113,7 @@
   z-index: 2;
 }
 .header,
-.icon {
+.ant {
   position: absolute;
   top: 60px;
 }
@@ -136,7 +132,7 @@
   font-size: var(--text-normal-size);
   font-family: var(--text-normal);
 }
-.icon {
+.ant {
   left: 934px;
   width: 582px;
   height: 1070px;

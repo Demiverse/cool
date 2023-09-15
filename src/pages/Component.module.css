@@ -1,4 +1,15 @@
-.f32Icon {
+.page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--text-normal-size);
+  color: var(--light-100);
+  font-family: var(--text-normal);
+  min-height: 100vh;
+}
+.background {
   position: absolute;
   top: 0;
   left: 0;
@@ -6,90 +17,36 @@
   height: 100%;
   object-fit: cover;
 }
-.logoIcon {
-  position: relative;
-  width: 150px;
-  height: 46.08px;
-  object-fit: cover;
-}
-.parentMenuItem {
+.container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: var(--gap-5xs);
-  color: var(--secondary-100);
-}
-.logoParent {
-  justify-content: flex-start;
-  gap: var(--gap-29xl);
-  z-index: 0;
-}
-.hoverIcon {
-  position: absolute;
-  margin: 0 !important;
-  height: 28.17%;
-  width: 0.94%;
-  top: 55.07%;
-  right: 72.92%;
-  bottom: 16.76%;
-  left: 26.15%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-  z-index: 1;
-}
-.normal {
-  position: relative;
-  line-height: 140%;
-}
-.button {
-  border-radius: var(--br-10xs);
-  background-color: var(--primary-100);
-  display: flex;
-  flex-direction: row;
-  padding: var(--padding-3xs) var(--padding-xl);
-  align-items: center;
+  flex-flow: column;
   justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  width: 90%;
+  max-width: 900px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: stretch;
 }
 .div6 {
   position: relative;
 }
-.buttonParent,
-.login {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: var(--gap-5xs);
-}
-.buttonParent {
-  justify-content: flex-end;
-  gap: var(--gap-13xl);
-  z-index: 2;
-}
 .child {
-  position: absolute;
   width: 720px;
-  left: 50%;
-  top: 162px;
   object-fit: cover;
   pointer-events: none;
-  transform: translateX(-50%);
   max-width: 85%;
+  user-select: none;
 }
 .buttonbuylevelnormal2Icon {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 141px;
   height: 41px;
   object-fit: cover;
 }
 .buttonbuylevelnormal2Parent {
-  position: absolute;
-  top: 143px;
-  left: 890px;
   width: 141px;
   height: 41px;
   display: none;
@@ -103,7 +60,7 @@
   width: 39.13px;
   height: 54.5px;
 }
-.icon,
+.ant,
 .inner,
 .item {
   position: absolute;
@@ -114,11 +71,13 @@
   width: 145.17px;
   height: 107.26px;
 }
-.icon {
-  top: 595px;
-  left: calc(50% - -521px);
-  width: 220px;
-  height: 191px;
+.ant {
+  --size: 130px;
+  top: 61%;
+  left: 82%;
+  transform: translate(-50%, -50%);
+  width: var(--size, 150px);
+  height: var(--size, 150px);
   object-fit: cover;
   cursor: pointer;
   -moz-transition: all 1s ease-out;
@@ -126,28 +85,12 @@
   -webkit-transition: all 1s ease-out;
 }
 
-.icon:hover{
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -o-transform: scale(1.1);
-}
-.div {
-  position: relative;
-  width: 100%;
-  height: 1080px;
-  overflow: hidden;
-  text-align: center;
-  font-size: var(--text-normal-size);
-  color: var(--light-100);
-  font-family: var(--text-normal);
+.ant:hover{
+  -webkit-transform: translate(-50%, -50%) scale(1.1);
+  -moz-transform: translate(-50%, -50%) scale(1.1);
+  -o-transform: translate(-50%, -50%) scale(1.1);
 }
 .text {
-  position: absolute;
-  width: 721px;
-  height: 300px;
-  left: 50%;
-  top: 377px;
-  transform: translateX(-50%);
   font-family: AllodsWest;
   font-style: normal;
   font-weight: 400;
@@ -160,7 +103,6 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  max-width: 85%;
 }
 .preloader {
   width: 100%;

@@ -2,12 +2,14 @@
     position: relative;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding: 2rem 3rem;
 }
+.header > * {
+    flex: 1 0 200px;
+}
 .div7 {
-    margin-right: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -27,22 +29,22 @@
     font-family: AllodsWest;
     font-size: 20px;
     line-height: 120%;
-    text-indent: 20px;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
-
 .link a {
     color: rgba(196, 196, 196, 0.7);
     text-decoration: none;
 }
-.link:hover {
+.link:hover,
+.link a:hover {
     color: white;
 }
-.link.active {
+.link.active,
+.link.active a {
     color: white;
 }
 .link.disabled {
@@ -57,7 +59,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: var(--gap-13xl);
+    gap: var(--gap-29xl);
 }
 .icons {
     position: relative;
@@ -65,7 +67,4 @@
     height: 16px;
     overflow: hidden;
     flex-shrink: 0;
-}
-.header[data-center="true"] {
-    justify-content: center;
 }

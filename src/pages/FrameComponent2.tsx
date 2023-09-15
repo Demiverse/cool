@@ -1,7 +1,8 @@
-import {FunctionComponent, useCallback, useLayoutEffect, useRef} from "react";
+import React, {FunctionComponent, useCallback, useLayoutEffect, useRef} from "react";
 import {Link, useNavigate} from "react-router-dom";
 import styles from "./FrameComponent2.module.css";
 import {useScroll} from "../hooks/useScroll";
+import {Header} from "../components/header/header";
 const FrameComponent2: FunctionComponent = () => {
   const navigate = useNavigate();
 
@@ -22,7 +23,7 @@ const FrameComponent2: FunctionComponent = () => {
   return (
     <div className={styles.f32Parent}>
         <div ref={ref} className={styles.f32Child}>
-      <img className={styles.f32Icon} alt="" src="/f-3-22@2x.png" />
+      <img className={styles.background} alt="" src="/f-3-22@2x.png" />
       <img className={styles.bgIcon} alt="" src="/bg2@2x.jpg" />
       <img className={styles.divIcon} alt="" src="/div@2x.png" />
       <div className={styles.header}>
@@ -62,7 +63,7 @@ const FrameComponent2: FunctionComponent = () => {
       </div>
             <img className={styles.frameChild} alt="" src="/rectangle-22@2x.png" />
             <div className={styles.preloader}>
-      <img className={styles.icon} alt="" src="/2@2x.png" />
+      <img className={styles.ant} alt="" src="/2@2x.png" />
             </div>
       <div className={styles.div6}>Найан</div>
       <div className={styles.div7}>
@@ -84,14 +85,7 @@ const FrameComponent2: FunctionComponent = () => {
             <Link to="/frame-285">Назад к персонажам</Link>
         </div>
       </div>
-      <div className={styles.wrapper}>
-        <div className={styles.div11}>
-          <img className={styles.icons} alt="" src="/icons4.svg" />
-          <div className={styles.div10}>
-              <a href="https://alloder.ru">Назад на сайт</a>
-          </div>
-        </div>
-      </div>
+            <Header showMenu={false}/>
         </div>
     </div>
   );

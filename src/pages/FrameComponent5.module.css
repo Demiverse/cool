@@ -1,5 +1,5 @@
 .bgIcon,
-.f32Icon {
+.background {
   position: absolute;
   top: 0;
   left: 0;
@@ -16,12 +16,12 @@
   height: 46.08px;
   object-fit: cover;
 }
-.div,
+.page,
 .icons,
 .logoIcon {
   position: relative;
 }
-.div {
+.page {
   text-transform: uppercase;
 }
 .icons {
@@ -96,7 +96,7 @@
   z-index: 2;
 }
 .header,
-.icon {
+.ant {
   position: absolute;
 }
 .header {
@@ -114,7 +114,7 @@
   font-size: var(--text-normal-size);
   font-family: var(--text-normal);
 }
-.icon {
+.ant {
   position: absolute;
   width: 420px;
   height: 900px;
@@ -264,27 +264,30 @@
     transform: translateY(0);
   }
 }
-.f32Child{
+.f32Child {
   position: absolute;
   top: 0;
   left: 0;
   bottom: -20px;
   right: -20px;
-  overflow: scroll;
+  overflow: auto;
 }
+.f32Child::-webkit-scrollbar {
+   display: none;
+ }
 
-.icon:active,
+.ant:active,
 .icon1:active,
 .icon2:active,
 .icon3:active {
    flex: 1 1 auto;
    aspect-ratio: unset;
 }
-.icon:not(.active),
+.ant:not(.active),
 .icon1:not(.active),
 .icon2:not(.active),
 .icon3:not(.active) {
-  flex: 1 1 2rem
+  flex: 1 1 2rem;
 }
 
 @keyframes wave {
@@ -295,7 +298,7 @@
     -webkit-mask-position: -50%;
   }
 }
-.icon:hover,
+.ant:hover,
 .icon1:hover,
 .icon2:hover,
 .icon3:hover {
@@ -304,7 +307,7 @@
    animation: wave 2s infinite;
  }
 
-.icon:not(.active),
+.ant:not(.active),
 .icon1:not(.active),
 .icon2:not(.active),
 .icon3:not(.active) {
@@ -312,7 +315,7 @@
   transition: 1s;
 
 }
-.icon:hover,
+.ant:hover,
 .icon1:hover,
 .icon2:hover,
 .icon3:hover {

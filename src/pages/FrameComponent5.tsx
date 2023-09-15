@@ -3,6 +3,8 @@ import {Link, useNavigate} from "react-router-dom";
 import styles from "./FrameComponent5.module.css";
 import {useScroll} from "../hooks/useScroll";
 import {Header} from "../components/header/header";
+
+// fixme: абсолюты,топ,лефт,сделать декор плашки дивами (background-repeat: X)
 const FrameComponent5: FunctionComponent = () => {
   const navigate = useNavigate();
 
@@ -31,19 +33,12 @@ const FrameComponent5: FunctionComponent = () => {
   return (
     <div className={styles.f32Parent}>
         <div ref={ref} className={styles.f32Child}>
-      <img className={styles.f32Icon} alt="" src="/f-3-22@2x.png" />
-          <div className={styles.menu}>
-            <div className={styles.allodswikiru2}>
-              <Link to="/">Главная</Link>
-            </div>
-            <div className={styles.allodswikiru}>Персонажи</div>
-            <div className={styles.allodswikiru2}>Новости</div>
-            <div className={styles.allodswikiru2}>Информация</div>
-          </div>
+      <img className={styles.background} alt="" src="/f-3-22@2x.png" />
+            <Header/>
           <div className={styles.preloader}>
               <img className={styles.bgIcon} alt="" src="/bg4@2x.png" />
       <img
-        className={styles.icon}
+        className={styles.ant}
         alt=""
         src="/4@2x.png"
         onClick={onImageClick}
@@ -78,8 +73,6 @@ const FrameComponent5: FunctionComponent = () => {
         <div className={styles.div6}>Играть</div>
       </div>
           </div>
-            <Header/>
-            {/* <img className={styles.frameChild} alt="" src="/rectangle-22@2x.png" /> */}
         </div>
       </div>
   );

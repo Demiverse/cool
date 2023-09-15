@@ -4,6 +4,8 @@ import styles from "./FrameComponent.module.css";
 import {useScrollContext} from "../components/scrollcontext";
 import {useScroll} from "../hooks/useScroll";
 import {Header} from "../components/header/header";
+import style from "../components/button/style.module.css";
+import {clsx} from "../utils/utils";
 
 const FrameComponent: FunctionComponent = () => {
     const navigate = useNavigate();
@@ -23,12 +25,12 @@ const FrameComponent: FunctionComponent = () => {
     return (
         <div className={styles.f32Parent}>
             <div ref={ref} className={styles.f32Child}>
-                <img className={styles.f32Icon} alt="" src="/f-3-22@2x.png"/>
+                <img className={styles.background} alt="" src="/f-3-22@2x.png"/>
                 <img className={styles.bgIcon} alt="" src="/bg@2x.jpg"/>
                 <img className={styles.divIcon} alt="" src="/div@2x.png"/>
                 <img className={styles.frameChild} alt="" src="/rectangle-22@2x.png"/>
                 <div className={styles.preloader}>
-                    <img className={styles.icon} alt="" src="/@2x.png"/>
+                    <img className={styles.ant} alt="" src="/@2x.png"/>
                 </div>
                 <div className={styles.div6}>Яскер</div>
                 <div className={styles.div7}>
