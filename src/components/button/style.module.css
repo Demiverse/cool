@@ -1,38 +1,38 @@
 .arrow {
-    --size: 100px;
-    position: relative;
-    display: block;
-    width: var(--size, 25px);
-    height: var(--size, 25px);
-    min-width: var(--size, 25px);
-    min-height: var(--size, 25px);
-    cursor: pointer;
+	--size: 100px;
+	position: relative;
+	display: block;
+	width: var(--size, 25px);
+	height: var(--size, 25px);
+	min-width: var(--size, 25px);
+	min-height: var(--size, 25px);
+	cursor: pointer;
 }
 
 .default {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: scroll;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 1s ease-in-out;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: scroll;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: all 1s ease-in-out;
 }
 .active {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
 }
 .defaultImage {
-    background-image: url("/public/arrowleftnormal-1@2x.png");
- }
+	background-image: url("/public/arrowleftnormal-1@2x.png");
+}
 .activeImage {
-    background-image: url("/public/arrowlefthighlighted-1@2x.png");
+	background-image: url("/public/arrowlefthighlighted-1@2x.png");
 }
 .arrow:hover .active {
-    opacity: 1;
+	opacity: 1;
 }

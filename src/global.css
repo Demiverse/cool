@@ -1,47 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap");
 @import url("https://myfonts.ru/myfonts?fonts=allodswest");
 body {
-  margin: 0;
-  line-height: normal;
-  overflow: hidden;
-  min-height: 100vh;
+	margin: 0;
+	line-height: normal;
+	overflow: hidden;
+	min-height: 100vh;
 }
 #root {
-  min-height: 100vh;
+	min-height: 100vh;
 }
 :root {
-  /* fonts */
-  --h6-desktop: AllodsWest;
-  --text-normal: "Open Sans";
+	/* fonts */
+	--h6-desktop: AllodsWest;
+	--text-normal: "Open Sans";
 
-  /* font sizes */
-  --h6-desktop-size: 20px;
-  --h1-desktop-size: 48px;
-  --text-normal-size: 16px;
+	/* font sizes */
+	--h6-desktop-size: 20px;
+	--h1-desktop-size: 48px;
+	--text-normal-size: 16px;
 
-  /* Colors */
-  --light-100: #f0f3ff;
-  --secondary-100: #fcc600;
-  --primary-100: #0d2341;
-  --primary-60: rgba(13, 35, 65, 0.6);
+	/* Colors */
+	--light-100: #f0f3ff;
+	--secondary-100: #fcc600;
+	--primary-100: #0d2341;
+	--primary-60: rgba(13, 35, 65, 0.6);
 
-  /* Gaps */
-  --gap-9xs: 4px;
-  --gap-13xl: 32px;
-  --gap-5xs: 8px;
-  --gap-29xl: 48px;
+	/* Gaps */
+	--gap-9xs: 4px;
+	--gap-13xl: 32px;
+	--gap-5xs: 8px;
+	--gap-29xl: 48px;
 
-  /* Paddings */
-  --padding-base: 16px;
-  --padding-29xl: 48px;
-  --padding-3xs: 10px;
-  --padding-xl: 20px;
+	/* Paddings */
+	--padding-base: 16px;
+	--padding-29xl: 48px;
+	--padding-3xs: 10px;
+	--padding-xl: 20px;
 
-  /* border radiuses */
-  --br-10xs: 3px;
+	/* border radiuses */
+	--br-10xs: 3px;
 }
 
 a {
-  color: white;
-  text-decoration: none;
+	color: white;
+	text-decoration: none;
 }
