@@ -14,7 +14,7 @@
 	font-family: var(--text-normal);
 	overflow-y: scroll;
 }
-.background {
+.pageBackground {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -41,7 +41,7 @@
 	justify-content: center;
 	align-items: stretch;
 }
-.div6 {
+.buttonText {
 	position: relative;
 }
 .child {
@@ -51,12 +51,12 @@
 	max-width: 85%;
 	user-select: none;
 }
-.buttonbuylevelnormal2Icon {
+.buttonImage {
 	width: 141px;
 	height: 41px;
 	object-fit: cover;
 }
-.buttonbuylevelnormal2Parent {
+.buttonContainer {
 	width: 141px;
 	height: 41px;
 	display: none;
@@ -114,7 +114,7 @@
 	-ms-user-select: none;
 	user-select: none;
 }
-.preloader {
+.content {
 	width: 100%;
 	position: relative;
 	-webkit-animation: slideIn 0.7s forwards;
