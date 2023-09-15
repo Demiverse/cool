@@ -1,4 +1,4 @@
-import style from "./style.module.css";
+import style from "./style.module.scss";
 import { Link, NavLink } from "react-router-dom";
 import React from "react";
 import { clsx } from "../../utils/utils";
@@ -18,7 +18,6 @@ export const Header: React.FC<Props> = ({ showMenu = true }) => {
 				<div className={clsx(style.link, style.active, style.div8)}>
 					<a href="https://alloder.ru">Назад на сайт</a>
 				</div>
-				<Button></Button>
 			</div>
 			{showMenu ? (
 				<div className={style.menu}>
