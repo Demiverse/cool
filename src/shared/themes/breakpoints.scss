@@ -1,0 +1,37 @@
+/* Breakpoints */
+$grid-breakpoints: (
+        xs: 320,
+        sm: 576,
+        md: 768,
+        lg: 992,
+        xl: 1200,
+        xxl: 1400,
+);
+/* OLD breakpoints
+    //320px — 480px: Mobile devices.
+    //481px — 768px: iPads, Tablets.
+    //769px — 1024px: Small screens, laptops.
+    //1025px — 1200px: Desktops, large screens.
+    //1201px and more — Extra large screens, TV.
+ */
+
+@function createBreakpointByType($type, $size) {
+    @return "screen and (" + $type + "-width: " +
+        map-get($grid-breakpoints, $size) + "px)";
+}
+@mixin smartBreakpointByType($type, $size) {
+    @media #{createBreakpointByType($type, $size)} {
+        @content;
+    }
+}
+
+@function createContainerWidthBreakpointByType($type, $size) {
+    @return "(" + $type + "-width: " + map-get($grid-breakpoints, $size) + "px)";
+}
+
+@mixin smartContainerByType($type, $size) {
+    container-type: inline-size;
+    @container #{createContainerWidthBreakpointByType($type, $size)} {
+        @content;
+    }
+}
