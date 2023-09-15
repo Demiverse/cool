@@ -1,8 +1,9 @@
 import React, { FunctionComponent, useCallback, useEffect, useLayoutEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import styles from "./FrameComponent5.module.css";
+import styles from "./FrameComponent5.module.scss";
 import { useScroll } from "../../hooks/useScroll";
 import { Header } from "../../components/header/header";
+import { Border } from "shared/ui/border";
 
 // fixme: абсолюты,топ,лефт,сделать декор плашки дивами (background-repeat: X)
 const FrameComponent5: FunctionComponent = () => {
@@ -41,8 +42,8 @@ const FrameComponent5: FunctionComponent = () => {
 					<img className={styles.icon1} alt="" src="/5@2x.png" onClick={onImage1Click} />
 					<img className={styles.icon2} alt="" src="/6@2x.png" onClick={onImage2Click} />
 					<img className={styles.icon3} alt="" src="/7@2x.png" onClick={onImage3Click} />
-					<img className={styles.divIcon} alt="" src="/div@2x.png" />
-					<img className={styles.divIcon1} alt="" src="/div@2x.png" />
+					<Border className={styles.divIcon} />
+					<Border className={styles.divIcon1} />
 					<div className={styles.frameChild} />
 					<div className={styles.buttonbuylevelnormal2Parent}>
 						<img className={styles.buttonbuylevelnormal2Icon} alt="" src="/buttonbuylevelnormal-2@2x.png" />
