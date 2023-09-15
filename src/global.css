@@ -41,6 +41,10 @@ body {
 	--br-10xs: 3px;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 a {
 	color: white;
 	text-decoration: none;
