@@ -4,7 +4,7 @@ import FrameComponent from "./pages/yasker/FrameComponent";
 import FrameComponent1 from "./pages/ann/FrameComponent1";
 import FrameComponent2 from "./pages/nayan/FrameComponent2";
 import FrameComponent3 from "./pages/smeyana/FrameComponent3";
-import FrameComponent5 from "./pages/persons/FrameComponent5";
+import FrameComponent5 from "./pages/characters/FrameComponent5";
 import { useEffect } from "react";
 import { ScrollProvider, WithScroll } from "./components/scrollcontext";
 
