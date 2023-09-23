@@ -4,7 +4,7 @@ import FrameComponent from "./pages/yasker/FrameComponent";
 import FrameComponent1 from "./pages/ann/FrameComponent1";
 import FrameComponent2 from "./pages/nayan/FrameComponent2";
 import FrameComponent3 from "./pages/smeyana/FrameComponent3";
-import FrameComponent5 from "./pages/characters/FrameComponent5";
+import CharactersPage from "./pages/characters";
 import { useEffect } from "react";
 import { ScrollProvider, WithScroll } from "./components/scrollcontext";
 
@@ -76,7 +76,7 @@ function App() {
 				<Route path="/frame-282" element={<FrameComponent1 />} />
 				<Route path="/frame-281" element={<FrameComponent2 />} />
 				<Route path="/frame-280" element={<FrameComponent3 />} />
-				<Route path="/frame-285" element={<FrameComponent5 />} />
+				<Route path="/frame-285" element={<CharactersPage />} />
 			</Routes>
 		</WithScroll>
 	);

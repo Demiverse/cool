@@ -1,12 +1,12 @@
-import React, { FunctionComponent, useCallback, useLayoutEffect, useRef } from "react";
+import React, { useCallback, useLayoutEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "./FrameComponent5.module.scss";
+import styles from "./styles.module.scss";
 import { useScroll } from "hooks/useScroll";
 import { Header } from "components/header/header";
 import { Border } from "shared/ui/border";
 import { clsx } from "utils/utils";
 
-const FrameComponent5: FunctionComponent = () => {
+const CharactersPage: React.FC = () => {
 	const navigate = useNavigate();
 
 	const onImageClick = useCallback(() => {
@@ -69,4 +69,4 @@ const PlayButton = () => (
 	</div>
 );
 
-export default FrameComponent5;
+export default CharactersPage;
