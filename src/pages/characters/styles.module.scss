@@ -33,27 +33,24 @@
 	position: relative;
 	width: 100%;
 	display: flex;
-	flex-flow: column;
-	justify-content: flex-start;
-	align-items: stretch;
-	gap: 2rem;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem 0;
 	-webkit-animation: slideIn 0.7s forwards;
 	-moz-animation: slideIn 0.7s forwards;
 	animation: slideIn 0.7s forwards;
+	overflow: hidden; // important for v2 carousel
 }
 
 .carousel {
-	$height: 900px;
-	$width: 420px;
+	$height: 900;
+	$width: 420;
 
-	flex: 1 1 auto;
+	flex: 1 1 100%;
 	width: 100%;
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: flex-start;
-	align-items: stretch;
 	gap: 2rem;
-	padding: 2rem;
+	padding: 2rem 1rem;
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
 
@@ -62,22 +59,84 @@
 	}
 
 	.slide {
-		flex: 1 1 auto;
 		scroll-snap-align: center;
-		height: 100%;
-		max-width: 100%;
-		display: flex;
-		flex-flow: column;
-		justify-items: center;
-		align-items: stretch;
-		cursor: pointer;
 
 		> img {
-			display: block;
 			height: 100%;
 			width: 100%;
+			display: block;
 			border-radius: 0.625rem;
 			object-fit: cover;
+		}
+	}
+
+	&[data-variant="v1"] {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		align-items: stretch;
+
+		.slide {
+			$margin: #{$width + "px"};
+
+			position: relative;
+			max-width: 100%;
+			height: auto;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-items: center;
+			align-items: stretch;
+			padding-left: min(#{$width + "px"}, 100%);
+			cursor: pointer;
+
+			&:first-child {
+				margin-left: $margin;
+			}
+
+			&:last-child {
+				margin-right: $margin;
+			}
+
+			> img {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+
+	&[data-variant="v2"] {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		align-items: stretch;
+
+		.slide {
+			$margin: #{$width + "px"};
+
+			flex: 1 0 min(#{$width + "px"}, 100%);
+			max-width: 100%;
+			height: auto;
+			width: min(#{$width + "px"}, 100%);
+			aspect-ratio: #{$width} / #{$height};
+			position: relative;
+			overflow-y: hidden;
+
+			&:first-child {
+				margin-left: $margin;
+			}
+
+			&:last-child {
+				margin-right: $margin;
+			}
+
+			> img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				max-height: 100%;
+				object-position: top;
+			}
 		}
 	}
 }
@@ -98,12 +157,16 @@
 }
 
 .border {
+	position: absolute;
+	left: 0;
 	width: 100%;
 	height: 25px;
 
-	.top {}
+	&.top {
+		top: 0;
+	}
 
-	.bottom {
+	&.bottom {
 		bottom: 0;
 	}
 }

@@ -38,7 +38,7 @@ const CharactersPage: React.FC = () => {
 			<div className={styles.content}>
 				<img className={styles.containerBackground} alt="" src="/bg4@2x.png" />
 				<Border className={clsx(styles.border, styles.top)} />
-				<div className={styles.carousel}>
+				<div className={styles.carousel} data-variant={"v2"}>
 					<Slide link={"/6@2x.png"} onClick={onImage2Click} className={styles.nayan} />
 					<Slide link={"/7@2x.png"} onClick={onImage3Click} className={styles.smeyana} />
 					<Slide link={"/4@2x.png"} onClick={onImageClick} className={styles.ant} />
