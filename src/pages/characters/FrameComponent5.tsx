@@ -1,8 +1,8 @@
 import React, { FunctionComponent, useCallback, useLayoutEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./FrameComponent5.module.scss";
-import { useScroll } from "../../hooks/useScroll";
-import { Header } from "../../components/header/header";
+import { useScroll } from "hooks/useScroll";
+import { Header } from "components/header/header";
 import { Border } from "shared/ui/border";
 import { clsx } from "utils/utils";
 
@@ -37,7 +37,7 @@ const FrameComponent5: FunctionComponent = () => {
 			<Header />
 			<div className={styles.content}>
 				<img className={styles.containerBackground} alt="" src="/bg4@2x.png" />
-				<Border className={styles.topBorder} />
+				<Border className={clsx(styles.border, styles.top)} />
 				<div className={styles.carousel}>
 					<Slide link={"/6@2x.png"} onClick={onImage2Click} className={styles.nayan} />
 					<Slide link={"/7@2x.png"} onClick={onImage3Click} className={styles.smeyana} />
@@ -50,7 +50,7 @@ const FrameComponent5: FunctionComponent = () => {
 					<img className={styles.yasker} alt="" src="/5@2x.png" onClick={onImage1Click} />
 					*/}
 				</div>
-				<Border className={styles.bottomBorder} />
+				<Border className={clsx(styles.border, styles.bottom)} />
 			</div>
 		</div>
 	);
