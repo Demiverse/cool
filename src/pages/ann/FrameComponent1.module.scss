@@ -1,0 +1,415 @@
+@import "shared/themes/breakpoints";
+
+.background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2016px;
+	height: 1206px;
+	object-fit: cover;
+}
+
+.bgIcon,
+.divIcon,
+.background {
+	position: absolute;
+	width: 2016px;
+	object-fit: cover;
+}
+
+.bgIcon {
+	top: 218px;
+	left: 0;
+	height: 850px;
+	filter: blur(5px) brightness(50%);
+	opacity: 70%;
+	pointer-events: none;
+	animation: ani 0.5s forwards;
+}
+
+@keyframes ani {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.divIcon {
+	top: 202px;
+	left: calc(50% - 962px);
+	height: 25px;
+	pointer-events: none;
+}
+
+.logoIcon {
+	width: 150px;
+	height: 46.08px;
+	object-fit: cover;
+}
+
+.page,
+.icons,
+.logoIcon {
+	position: relative;
+}
+
+.page {
+	text-transform: uppercase;
+}
+
+.icons {
+	width: 16px;
+	height: 16px;
+	overflow: hidden;
+	flex-shrink: 0;
+}
+
+.logoParent,
+.menu,
+.parentMenuItem {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.parentMenuItem {
+	justify-content: flex-start;
+	gap: var(--gap-5xs);
+	color: var(--secondary-100);
+}
+
+.logoParent,
+.menu {
+	justify-content: center;
+	gap: var(--gap-13xl);
+}
+
+.logoParent {
+	justify-content: flex-start;
+	gap: var(--gap-29xl);
+	z-index: 0;
+}
+
+.hoverIcon {
+	position: absolute;
+	margin: 0 !important;
+	height: 28.17%;
+	width: 0.94%;
+	top: 55.07%;
+	right: 72.92%;
+	bottom: 16.76%;
+	left: 26.15%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	z-index: 1;
+}
+
+.normal {
+	position: relative;
+	line-height: 140%;
+}
+
+.button {
+	border-radius: var(--br-10xs);
+	background-color: var(--primary-100);
+	display: flex;
+	flex-direction: row;
+	padding: var(--padding-3xs) var(--padding-xl);
+	align-items: center;
+	justify-content: center;
+}
+
+.div5 {
+	position: relative;
+}
+
+.buttonParent,
+.login {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	gap: var(--gap-5xs);
+}
+
+.buttonParent {
+	justify-content: flex-end;
+	gap: var(--gap-13xl);
+	z-index: 2;
+}
+
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: var(--primary-60);
+	width: 1920px;
+	height: 80px;
+	display: none;
+	flex-direction: row;
+	padding: var(--padding-base) var(--padding-29xl);
+	box-sizing: border-box;
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
+	font-size: var(--text-normal-size);
+	font-family: var(--text-normal);
+}
+
+.preloader {
+	width: 777px;
+	height: 933px;
+
+	position: absolute;
+	top: 147px;
+	left: 925px;
+	z-index: 2;
+
+	-webkit-animation: slideIn 0.7s forwards;
+	-moz-animation: slideIn 0.7s forwards;
+	animation: slideIn 0.7s forwards;
+}
+
+.ant {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	pointer-events: none;
+	opacity: 0;
+	animation: ani 1s forwards;
+}
+
+@keyframes ani {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.character {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 310px;
+	left: 350px;
+	line-height: 120%;
+	max-width: 430px;
+	height: 580px;
+
+	.creator {
+		margin-bottom: 100px;
+	}
+
+	.name {
+		font-size: var(--h1-desktop-size);
+		line-height: initial;
+		color: var(--secondary-100);
+		margin-bottom: 25px;
+	}
+
+	.about {
+		margin-top: 0;
+	}
+
+	.goBack {
+		display: flex;
+		align-items: center;
+		gap: var(--gap-9xs);
+		margin-top: auto;
+	}
+}
+
+.divIcon1 {
+	position: absolute;
+	top: 1055px;
+	left: calc(50% - 962px);
+	z-index: 3;
+	width: 1920px;
+	height: 25px;
+	object-fit: cover;
+	pointer-events: none;
+}
+
+.arrowlefthighlighted1Icon {
+	background-image: url('/../public/arrowleftnormal-1@2x.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 606px;
+	left: 1535px;
+	z-index: 4;
+	width: 128px;
+	height: 128px;
+	object-fit: cover;
+	cursor: pointer;
+	transform: scale(-1, 1);
+	transition: all 1s ease-in-out;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	-webkit-animation: spinAndZoom 1s 1;
+	animation: spinAndZoom 1s 1;
+}
+
+.arrowlefthighlighted1Icon:hover {
+	background-image: url('/../public/arrowlefthighlighted-1@2x.png');
+}
+
+.arrowleftnormal1Icon {
+	background-image: url('/../public/arrowleftnormal-1@2x.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 606px;
+	left: 1535px;
+	z-index: 4;
+	width: 128px;
+	height: 128px;
+	object-fit: cover;
+	cursor: pointer;
+	transition: all 1s ease-in-out;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	-webkit-animation: spinAndZoom 1s 1;
+	animation: spinAndZoom 1s 1;
+}
+
+.arrowleftnormal1Icon:hover {
+	background-image: url('/../public/arrowlefthighlighted-1@2x.png');
+}
+
+.arrowleftnormal1Icon {
+	top: 606px;
+	left: 990px;
+}
+
+.div11,
+.wrapper {
+	position: absolute;
+}
+
+.div11 {
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	gap: var(--gap-9xs);
+}
+
+.wrapper {
+	top: 70px;
+	left: 50px;
+	width: 164px;
+	height: 24px;
+}
+
+.pageLogo {
+	position: absolute;
+	top: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+	width: 487px;
+	object-fit: cover;
+	pointer-events: none;
+}
+
+.f32Parent {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-image: url('/../public/frame-283@3x.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top;
+	text-align: left;
+	font-size: var(--h6-desktop-size);
+	color: var(--light-100);
+	font-family: var(--h6-desktop);
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.f32Child {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: -143px;
+	right: -20px;
+	overflow: scroll;
+}
+
+@-webkit-keyframes slideIn {
+	0% {
+		transform: translateX(900px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@-moz-keyframes slideIn {
+	0% {
+		transform: translateX(900px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideIn {
+	0% {
+		transform: translateX(-900px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@include smartBreakpointByType(max, sm) {
+	.pageLogo {
+		top: 0;
+		left: 0;
+		width: 100%;
+		transform: translateX(0);
+	}
+	.divIcon,
+	.divIcon1 {
+		width: 100%;
+		left: 0;
+	}
+	.character {
+		top: 310px;
+		left: 20px;
+		max-width: 98%;
+	
+		.creator {
+			margin-bottom: 50px;
+		}
+	
+		.name {
+			font-size: var(--h1-mobile-size);
+			margin-bottom: 15px;
+		}
+	
+		.about {
+			margin-bottom: 50px;
+		}
+	}
+}
