@@ -23,13 +23,11 @@ const FrameComponent1: FunctionComponent = () => {
 	return (
 		<div className={styles.f32Parent}>
 			<div ref={ref} className={styles.f32Child}>
+				<Header showMenu={false} />
 				<img className={styles.background} alt="" src="/f-3-22@2x.png" />
 				<img className={styles.bgIcon} alt="" src="/bg1@2x.jpg" />
-				<img className={styles.divIcon} alt="" src="/div@2x.png" />
 				<img className={styles.pageLogo} alt="" src="/rectangle-22@2x.png" />
-				<div className={styles.preloader}>
-					<img className={styles.ant} alt="" src="/1@2x.png" />
-				</div>
+				<img className={styles.divIcon} alt="" src="/div@2x.png" />
 				<div className={styles.character}>
 					<div className={styles.creator}>Художник: Opium Witch</div>
 					<div className={styles.name}>Антуанетта</div>
@@ -44,10 +42,12 @@ const FrameComponent1: FunctionComponent = () => {
 						<Link to="/frame-285">Назад к персонажам</Link>
 					</div>
 				</div>
-				<img className={styles.divIcon1} alt="" src="/div@2x.png" />
+				<div className={styles.preloader}>
+					<img className={styles.ant} alt="" src="/1@2x.png" />
+				</div>
 				<div className={styles.arrowlefthighlighted1Icon} onClick={onArrowLeftHighlighted1ImageClick} />
 				<div className={styles.arrowleftnormal1Icon} onClick={onArrowLeftNormal1ImageClick} />
-				<Header showMenu={false} />
+				<img className={styles.divIcon1} alt="" src="/div@2x.png" />
 			</div>
 		</div>
 	);
