@@ -31,7 +31,6 @@
 	0% {
 		opacity: 0;
 	}
-
 	100% {
 		opacity: 1;
 	}
@@ -251,9 +250,7 @@
 	cursor: pointer;
 	transform: scale(-1, 1);
 	transition: all 1s ease-in-out;
-	-webkit-animation-fill-mode: forwards;
 	animation-fill-mode: forwards;
-	-webkit-animation: spinAndZoom 1s 1;
 	animation: spinAndZoom 1s 1;
 }
 
@@ -274,9 +271,7 @@
 	object-fit: cover;
 	cursor: pointer;
 	transition: all 1s ease-in-out;
-	-webkit-animation-fill-mode: forwards;
 	animation-fill-mode: forwards;
-	-webkit-animation: spinAndZoom 1s 1;
 	animation: spinAndZoom 1s 1;
 }
 
@@ -376,7 +371,6 @@
 	0% {
 		transform: translateX(-900px);
 	}
-
 	100% {
 		transform: translateX(0);
 	}
@@ -398,16 +392,13 @@
 		top: 310px;
 		left: 20px;
 		max-width: 98%;
-	
 		.creator {
 			margin-bottom: 50px;
 		}
-	
 		.name {
 			font-size: var(--h1-mobile-size);
 			margin-bottom: 15px;
 		}
-	
 		.about {
 			margin-bottom: 50px;
 		}
