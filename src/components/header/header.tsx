@@ -15,9 +15,11 @@ export const Header: React.FC<Props> = ({ showMenu = true }) => {
 		<div className={style.header}>
 			<div className={style.div7} style={{ color: "white" }}>
 				<img className={style.icons} alt="" src="/icons4.svg" />
-				<div className={clsx(style.link, style.active, style.div8)}>
-					<a href="https://alloder.ru">Назад на сайт</a>
-				</div>
+					<a
+						className={clsx(style.link, style.active, style.div8)}
+						href="https://alloder.ru">
+						Назад на сайт
+					</a>
 			</div>
 			{showMenu ? (
 				<div className={style.menu}>
@@ -27,17 +29,16 @@ export const Header: React.FC<Props> = ({ showMenu = true }) => {
 					<NavLink to="/frame-285" className={isActiveLink}>
 						Персонажи
 					</NavLink>
-					<NavLink
+					{/* <NavLink
 						to="/"
 						className={({ isActive }) => clsx(isActiveLink({ isActive }), style.disabled)}
 					></NavLink>
 					<NavLink
 						to="/"
 						className={({ isActive }) => clsx(isActiveLink({ isActive }), style.disabled)}
-					></NavLink>
+					></NavLink> */}
 				</div>
 			) : null}
-			<div></div>
 		</div>
 	);
 };
