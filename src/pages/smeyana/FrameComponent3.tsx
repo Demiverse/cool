@@ -1,6 +1,6 @@
-import React, { FunctionComponent, useCallback, useLayoutEffect, useRef } from "react";
+import { FunctionComponent, useCallback, useLayoutEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import styles from "./FrameComponent3.module.css";
+import styles from "./FrameComponent3.module.scss";
 import { useScroll } from "../../hooks/useScroll";
 import { Header } from "../../components/header/header";
 const FrameComponent3: FunctionComponent = () => {
@@ -26,22 +26,22 @@ const FrameComponent3: FunctionComponent = () => {
 				<img className={styles.background} alt="" src="/f-3-22@2x.png" />
 				<img className={styles.bgIcon} alt="" src="/bg3@2x.jpg" />
 				<img className={styles.divIcon} alt="" src="/div@2x.png" />
-				<img className={styles.frameChild} alt="" src="/rectangle-22@2x.png" />
+				<img className={styles.pageLogo} alt="" src="/rectangle-22@2x.png" />
 				<div className={styles.preloader}>
 					<img className={styles.ant} alt="" src="/3@2x.png" />
 				</div>
-				<div className={styles.div6}>Смеяна</div>
-				<div className={styles.div7}>
-					Великая Волшебница Смеяна по праву считается одним из флагманов техномагического развития Сарнаута.
-					Изобретения из её мастерских пользуются популярностью во всём мире. Даже лапотники из дальних
-					канийских деревень слышали об этой женщине властных нравов. По слухам, Владычица имеет свои
-					академии, где вход открыт лишь для канийских девиц. И она хотела бы распространять образование и
-					дальше — чтобы искоренить невежество среди простого люда.
-				</div>
-				<div className={styles.div10}>Художник: Sandra Verenim</div>
-				<div className={styles.div8}>
-					<img className={styles.icons} alt="" src="/icons4.svg" />
-					<div className={styles.div9}>
+				<div className={styles.character}>
+					<div className={styles.creator}>Художник: Sandra Verenim</div>
+					<div className={styles.name}>Смеяна</div>
+					<p className={styles.about}>
+						Великая Волшебница Смеяна по праву считается одним из флагманов техномагического развития Сарнаута.
+						Изобретения из её мастерских пользуются популярностью во всём мире.<br/>Даже лапотники из дальних
+						канийских деревень слышали об этой женщине властных нравов.<br />По слухам, Владычица имеет свои
+						академии, где вход открыт лишь для канийских девиц. И она хотела бы распространять образование и
+						дальше — чтобы искоренить невежество среди простого люда.
+					</p>
+					<div className={styles.goBack}>
+						<img className={styles.icons} alt="" src="/icons4.svg" />
 						<Link to="/frame-285">Назад к персонажам</Link>
 					</div>
 				</div>
