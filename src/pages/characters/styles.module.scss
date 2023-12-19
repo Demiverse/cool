@@ -232,3 +232,9 @@
 		-webkit-mask-position: -50%;
 	}
 }
+
+@include smartBreakpointByType(max, sm) {
+	.pageBackground {
+		height: 220px;
+	}
+}
