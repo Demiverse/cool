@@ -1,8 +1,7 @@
 import style from "./style.module.scss";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import React from "react";
 import { clsx } from "../../utils/utils";
-import { Button } from "../button/button";
 
 interface Props {
 	showMenu?: boolean;
@@ -29,14 +28,6 @@ export const Header: React.FC<Props> = ({ showMenu = true }) => {
 					<NavLink to="/frame-285" className={isActiveLink}>
 						Персонажи
 					</NavLink>
-					{/* <NavLink
-						to="/"
-						className={({ isActive }) => clsx(isActiveLink({ isActive }), style.disabled)}
-					></NavLink>
-					<NavLink
-						to="/"
-						className={({ isActive }) => clsx(isActiveLink({ isActive }), style.disabled)}
-					></NavLink> */}
 				</div>
 			) : null}
 		</div>
