@@ -181,7 +181,7 @@
 	}
 }
 
-@include smartBreakpointByType(max, xs) {
+@include smartBreakpointByType(max, sm) {
 	.text {
 		font-size: 16px;
 	}
