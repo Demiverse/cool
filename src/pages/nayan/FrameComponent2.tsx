@@ -22,14 +22,15 @@ const FrameComponent2: FunctionComponent = () => {
 	}, []);
 
 	const preloaderSrc = isMobile() ? '2@2x-mob.png' : '2@2x.png';
-
+	const logoSrc = isMobile() ? 'rectangle-22@2x-mob.png' : 'rectangle-22@2x.png';
+	
 	return (
 		<div className={styles.f32Parent}>
 			<div ref={ref} className={styles.f32Child}>
 				<Header showMenu={false} />
 				<img className={styles.background} alt="" src="/f-3-22@2x.png" />
 				<img className={styles.bgIcon} alt="" src="/bg2@2x.jpg" />
-				<img className={styles.pageLogo} alt="" src="/rectangle-221@2x.png" />
+				<img className={styles.pageLogo} alt="" src={`/${logoSrc}`} />
 				<img className={styles.divIcon} alt="" src="/div@2x.png" />
 				<div className={styles.character}>
 					<div className={styles.creator}>Художник: аNон</div>

@@ -22,6 +22,7 @@ const FrameComponent3: FunctionComponent = () => {
 	}, []);
 
 	const preloaderSrc = isMobile() ? '3@2x-mob.png' : '3@2x.png';
+	const logoSrc = isMobile() ? 'rectangle-22@2x-mob.png' : 'rectangle-22@2x.png';
 
 	return (
 		<div className={styles.f32Parent}>
@@ -29,7 +30,7 @@ const FrameComponent3: FunctionComponent = () => {
 				<Header showMenu={false} />
 				<img className={styles.background} alt="" src="/f-3-22@2x.png" />
 				<img className={styles.bgIcon} alt="" src="/bg3@2x.jpg" />
-				<img className={styles.pageLogo} alt="" src="/rectangle-22@2x.png" />
+				<img className={styles.pageLogo} alt="" src={`/${logoSrc}`} />
 				<img className={styles.divIcon} alt="" src="/div@2x.png" />
 				<div className={styles.character}>
 					<div className={styles.creator}>Художник: Sandra Verenim</div>

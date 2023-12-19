@@ -23,6 +23,7 @@ const FrameComponent: FunctionComponent = () => {
 	}, []);
 
 	const preloaderSrc = isMobile() ? '@2x-mob.png' : '@2x.png';
+	const logoSrc = isMobile() ? 'rectangle-22@2x-mob.png' : 'rectangle-22@2x.png';
 
 	return (
 		<div className={styles.f32Parent}>
@@ -30,7 +31,7 @@ const FrameComponent: FunctionComponent = () => {
 				<Header showMenu={false} />
 				<img className={styles.background} alt="" src="/f-3-22@2x.png" />
 				<img className={styles.bgIcon} alt="" src="/bg@2x.jpg" />
-				<img className={styles.pageLogo} alt="" src="/rectangle-22@2x.png" />
+				<img className={styles.pageLogo} alt="" src={`/${logoSrc}`} />
 				<img className={styles.divIcon} alt="" src="/div@2x.png" />
 				<div className={styles.character}>
 					<div className={styles.creator}>Художник: UNGOODEST</div>
