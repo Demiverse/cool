@@ -40,6 +40,11 @@ body {
 
 	/* border radiuses */
 	--br-10xs: 3px;
+
+	/* Element sizes */
+	--section-mob-height: 500px;
+	--header-mob-height: 150px;
+	--divider-height: 25px;
 }
 
 * {
