@@ -300,7 +300,7 @@
 	}
 }
 
-@media (max-width: 480px) and (height <= 590px) {
+@media (max-width: 480px) and (max-height: 644px) {
 	.divIcon2 {
 		top: calc(500px + 150px + 450px + 25px * 3 + 50px);
 	}
