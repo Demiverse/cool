@@ -74,7 +74,7 @@
 	top: -10px;
 	left: 50%;
 	transform: translateX(-50%);
-	z-index: 1;
+	z-index: 2;
 	width: 487px;
 	object-fit: cover;
 	pointer-events: none;
@@ -164,9 +164,7 @@
 	object-fit: cover;
 	cursor: pointer;
 	transform: scale(-1, 1);
-	transition: all 1s ease-in-out;
-	animation-fill-mode: forwards;
-	animation: spinAndZoom 1s 1;
+	transition: background-image 1s ease-in-out;
 }
 
 .arrowlefthighlighted1Icon:hover {
@@ -179,27 +177,21 @@
 	background-size: cover;
 	position: absolute;
 	top: 606px;
-	left: 1535px;
+	left: 990px;
 	z-index: 4;
 	width: 128px;
 	height: 128px;
 	object-fit: cover;
 	cursor: pointer;
-	transition: all 1s ease-in-out;
-	animation-fill-mode: forwards;
-	animation: spinAndZoom 1s 1;
+	transition: background-image 1s ease-in-out;
 }
 
 .arrowleftnormal1Icon:hover {
 	background-image: url('/../public/arrowlefthighlighted-1@2x.png');
 }
 
-.arrowleftnormal1Icon {
-	top: 606px;
-	left: 990px;
-}
-
-.divIcon1 {
+.divIcon1,
+.divIcon2 {
 	position: absolute;
 	top: 1055px;
 	left: calc(50% - 962px);
@@ -220,21 +212,50 @@
 }
 
 @include smartBreakpointByType(max, sm) {
+	.f32Child {
+		inset: 0;
+	}
+	.icons {
+		width: 14px;
+		height: 14px;
+	}
+	.bgIcon,
+	.divIcon,
+	.divIcon1,
+	.divIcon2,
+	.background {
+		width: 100%;
+		left: 0;
+	}
+	.background {
+		height: auto;
+		z-index: 1;
+	}
+	.bgIcon {
+		height: 500px;
+		top: 160px;
+	}
+	.divIcon {
+		z-index: 2;
+	}
+	.divIcon1 {
+		top: calc(500px + 150px);
+	}
 	.pageLogo {
-		top: 0;
+		top: 15px;
 		left: 0;
 		width: 100%;
 		transform: translateX(0);
 	}
-	.divIcon,
-	.divIcon1 {
-		width: 100%;
-		left: 0;
-	}
 	.character {
-		top: 310px;
-		left: 20px;
-		max-width: 98%;
+		width: calc(100% - 2rem);
+		height: 450px;
+		// 500px + 150px - 'preloader' + 'header' height
+		// 25px - divider line image height
+		// 2 - amount of them
+		top: calc(500px + 150px + 25px * 2);
+		left: 50%;
+		transform: translateX(-50%);
 		.creator {
 			margin-bottom: 50px;
 		}
@@ -242,8 +263,32 @@
 			font-size: var(--h1-mobile-size);
 			margin-bottom: 15px;
 		}
-		.about {
-			margin-bottom: 50px;
+		.about,
+		.goBack {
+			font-size: 16px;
 		}
+	}
+	.preloader {
+		width: 100%;
+		top: 160px;
+		left: 0;
+		height: 500px;
+	}
+	.arrowlefthighlighted1Icon,
+	.arrowleftnormal1Icon {
+		top: 420px;
+		width: 64px;
+		height: 64px;
+	}
+	.arrowlefthighlighted1Icon {
+		//  64px - element width, 1rem - "container" margin
+		left: calc(100% - 64px - 1rem);
+	}
+	.arrowleftnormal1Icon {
+		left: 1rem;
+	}
+	.divIcon2 {
+		// 450px - 'character' height
+		top: calc(500px + 150px + 450px + 25px * 3);
 	}
 }
