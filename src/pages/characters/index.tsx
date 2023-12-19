@@ -43,12 +43,6 @@ const CharactersPage: React.FC = () => {
 					<Slide link={"/7@2x.png"} onClick={onImage3Click} className={styles.smeyana} />
 					<Slide link={"/4@2x.png"} onClick={onImageClick} className={styles.ant} />
 					<Slide link={"/5@2x.png"} onClick={onImage1Click} className={styles.yasker} />
-					{/*
-					<img className={styles.nayan} alt="" src="/6@2x.png" onClick={onImage2Click} />
-					<img className={styles.smeyana} alt="" src="/7@2x.png" onClick={onImage3Click} />
-					<img className={styles.ant} alt="" src="/4@2x.png" onClick={onImageClick} />
-					<img className={styles.yasker} alt="" src="/5@2x.png" onClick={onImage1Click} />
-					*/}
 				</div>
 				<Border className={clsx(styles.border, styles.bottom)} />
 			</div>
