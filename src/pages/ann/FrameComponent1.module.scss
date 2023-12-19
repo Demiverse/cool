@@ -299,3 +299,9 @@
 		top: calc(500px + 150px + 450px + 25px * 3);
 	}
 }
+
+@media (max-width: 480px) and (height <= 590px) {
+	.divIcon2 {
+		top: calc(500px + 150px + 450px + 25px * 3 + 50px);
+	}
+}
