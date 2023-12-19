@@ -1,5 +1,6 @@
 import { FunctionComponent, useCallback, useLayoutEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { isMobile } from "utils/utils";
 import styles from "./FrameComponent2.module.scss";
 import { useScroll } from "../../hooks/useScroll";
 import { Header } from "../../components/header/header";
@@ -20,13 +21,15 @@ const FrameComponent2: FunctionComponent = () => {
 		if (ref.current) ref.current.scrollTop = scroll;
 	}, []);
 
+	const preloaderSrc = isMobile() ? '2@2x-mob.png' : '2@2x.png';
+
 	return (
 		<div className={styles.f32Parent}>
 			<div ref={ref} className={styles.f32Child}>
 				<Header showMenu={false} />
 				<img className={styles.background} alt="" src="/f-3-22@2x.png" />
 				<img className={styles.bgIcon} alt="" src="/bg2@2x.jpg" />
-				<img className={styles.pageLogo} alt="" src="/rectangle-22@2x.png" />
+				<img className={styles.pageLogo} alt="" src="/rectangle-221@2x.png" />
 				<img className={styles.divIcon} alt="" src="/div@2x.png" />
 				<div className={styles.character}>
 					<div className={styles.creator}>Художник: аNон</div>
@@ -44,11 +47,12 @@ const FrameComponent2: FunctionComponent = () => {
 					</div>
 				</div>
 				<div className={styles.preloader}>
-					<img className={styles.ant} alt="" src="/2@2x.png" />
+					<img className={styles.ant} alt="" src={`/${preloaderSrc}`} />
 				</div>
 				<div className={styles.arrowlefthighlighted1Icon} onClick={onArrowLeftHighlighted1ImageClick} />
 				<div className={styles.arrowleftnormal1Icon} onClick={onArrowLeftNormal1ImageClick} />
 				<img className={styles.divIcon1} alt="" src="/div@2x.png" />
+				{isMobile() && <img className={styles.divIcon2} alt="" src="/div@2x.png" />}
 			</div>
 		</div>
 	);

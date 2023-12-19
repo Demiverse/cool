@@ -1,5 +1,6 @@
 import { FunctionComponent, useCallback, useLayoutEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { isMobile } from "utils/utils";
 import styles from "./FrameComponent1.module.scss";
 import { useScroll } from "../../hooks/useScroll";
 import { Header } from "../../components/header/header";
@@ -48,6 +49,7 @@ const FrameComponent1: FunctionComponent = () => {
 				<div className={styles.arrowlefthighlighted1Icon} onClick={onArrowLeftHighlighted1ImageClick} />
 				<div className={styles.arrowleftnormal1Icon} onClick={onArrowLeftNormal1ImageClick} />
 				<img className={styles.divIcon1} alt="" src="/div@2x.png" />
+				{isMobile() && <img className={styles.divIcon2} alt="" src="/div@2x.png" />}
 			</div>
 		</div>
 	);
