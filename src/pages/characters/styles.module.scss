@@ -1,3 +1,5 @@
+@import "shared/themes/breakpoints";
+
 .page {
 	position: relative;
 	width: 100%;
@@ -142,17 +144,18 @@
 }
 
 .ant, .yasker, .nayan, .smeyana {
-	&:not(.active) {
-		filter: brightness(22%);
-		transition: 1s;
-	}
-
-	&:hover {
-		mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.6) 30%, #000 50%, rgba(0, 0, 0, 0.6) 70%);
-		mask-size: 200%;
-		animation: wave 2s infinite;
-		filter: brightness(100%);
-		transition: 1s;
+	@media (hover:hover) {
+		&:not(.active) {
+			filter: brightness(22%);
+			transition: 1s;
+		}
+		&:hover {
+			mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.6) 30%, #000 50%, rgba(0, 0, 0, 0.6) 70%);
+			mask-size: 200%;
+			animation: wave 2s infinite;
+			filter: brightness(100%);
+			transition: 1s;
+		}
 	}
 }
 
