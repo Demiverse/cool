@@ -305,3 +305,9 @@
 		top: calc(500px + 150px + 450px + 25px * 3 + 50px);
 	}
 }
+
+@media (max-width: 390px) and (max-height: 680px) {
+	.divIcon2 {
+		top: calc(500px + 150px + 450px + 25px * 3 + 50px);
+	}
+}
