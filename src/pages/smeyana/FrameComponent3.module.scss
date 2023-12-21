@@ -268,10 +268,10 @@
 		}
 	}
 	.preloader {
-		width: 100%;
+		width: 70%;
 		height: var(--section-mob-height);
 		top: calc(var(--header-mob-height) + var(--divider-height) / 2);
-		left: 0;
+		left: 50px;
 		display: flex;
 		justify-content: center;
 	}
