@@ -1,8 +1,7 @@
-import { FunctionComponent, useCallback } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { FunctionComponent } from "react";
 import styles from "./Component.module.scss";
 import { Header } from "../../components/header/header";
-
+import MuteButton from "components/muteButton/MuteButton";
 import useSound from "hooks/useSound";
 import backgroundSound from "./backgroundSound.mp3";
 
@@ -12,6 +11,7 @@ const Component: FunctionComponent = () => {
 		<div className={styles.page}>
 			<img className={styles.background} src="/f-3-22@2x-light.png" />
 			<Header />
+			<MuteButton muted={muted} toggleMuteBgSound={toggleMuteBgSound} />
 			<div className={styles.container}>
 				<div className={styles.wrapper}>
 					<div className={styles.preloader2}>

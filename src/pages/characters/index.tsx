@@ -5,6 +5,7 @@ import useSound from "hooks/useSound";
 import styles from "./styles.module.scss";
 import { useScroll } from "hooks/useScroll";
 import { Header } from "components/header/header";
+import MuteButton from "components/muteButton/MuteButton";
 import { Border } from "shared/ui/border";
 import { clsx } from "utils/utils";
 
@@ -38,6 +39,7 @@ const CharactersPage: React.FC = () => {
 		<div className={styles.page}>
 			<img className={styles.pageBackground} alt="" src="/f-3-22@2x-cropped.webp" />
 			<Header />
+			<MuteButton muted={muted} toggleMuteBgSound={toggleMuteBgSound} />
 			<div className={styles.content}>
 				<div className={styles.containerBackground}></div>
 				<Border className={clsx(styles.border, styles.top)} />

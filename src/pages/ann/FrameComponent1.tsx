@@ -6,6 +6,7 @@ import { isMobile } from "utils/utils";
 import styles from "./FrameComponent1.module.scss";
 import { useScroll } from "../../hooks/useScroll";
 import { Header } from "../../components/header/header";
+import MuteButton from "components/muteButton/MuteButton";
 const FrameComponent1: FunctionComponent = () => {
 	const navigate = useNavigate();
 	const [muted, { toggleMuteBgSound }] = useSound(backgroundSound);
@@ -24,11 +25,12 @@ const FrameComponent1: FunctionComponent = () => {
 		if (ref.current) ref.current.scrollTop = scroll;
 	}, []);
 
-	const logoSrc = isMobile() ? 'rectangle-22@2x-mob.png' : 'rectangle-22@2x-light.png';	
+	const logoSrc = isMobile() ? 'rectangle-22@2x-mob.png' : 'rectangle-22@2x-light.png';
 	return (
 		<div className={styles.f32Parent}>
 			<div ref={ref} className={styles.f32Child}>
 				<Header showMenu={false} />
+				<MuteButton muted={muted} toggleMuteBgSound={toggleMuteBgSound} />
 				<img className={styles.background} src="/f-3-22@2x-cropped.webp" />
 				<img className={styles.bgIcon} src="/bg1@2x-light.webp" />
 				<img className={styles.pageLogo} src={`/${logoSrc}`} />

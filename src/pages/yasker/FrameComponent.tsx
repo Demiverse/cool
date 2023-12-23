@@ -6,6 +6,7 @@ import { isMobile } from "utils/utils";
 import styles from "./FrameComponent.module.scss";
 import { useScroll } from "../../hooks/useScroll";
 import { Header } from "../../components/header/header";
+import MuteButton from "components/muteButton/MuteButton";
 
 const FrameComponent: FunctionComponent = () => {
 	const navigate = useNavigate();
@@ -32,6 +33,7 @@ const FrameComponent: FunctionComponent = () => {
 		<div className={styles.f32Parent}>
 			<div ref={ref} className={styles.f32Child}>
 				<Header showMenu={false} />
+				<MuteButton muted={muted} toggleMuteBgSound={toggleMuteBgSound} />
 				<img className={styles.background} src="/f-3-22@2x-cropped.webp" />
 				<img className={styles.bgIcon} src="/bg@2x.webp" />
 				<img className={styles.pageLogo} src={`/${logoSrc}`} />
