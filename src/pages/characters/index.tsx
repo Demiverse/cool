@@ -33,16 +33,16 @@ const CharactersPage: React.FC = () => {
 
 	return (
 		<div className={styles.page}>
-			<img className={styles.pageBackground} alt="" src="/f-3-22@2x.png" />
+			<img className={styles.pageBackground} alt="" src="/f-3-22@2x-cropped.webp" />
 			<Header />
 			<div className={styles.content}>
-				<img className={styles.containerBackground} alt="" src="/bg4@2x.png" />
+				<div className={styles.containerBackground}></div>
 				<Border className={clsx(styles.border, styles.top)} />
 				<div className={styles.carousel} data-variant={"v2"}>
-					<Slide link={"/6@2x.png"} onClick={onImage2Click} className={styles.nayan} />
-					<Slide link={"/7@2x.png"} onClick={onImage3Click} className={styles.smeyana} />
-					<Slide link={"/4@2x.png"} onClick={onImageClick} className={styles.ant} />
-					<Slide link={"/5@2x.png"} onClick={onImage1Click} className={styles.yasker} />
+					<Slide link={"/6@2x.webp"} onClick={onImage2Click} className={styles.nayan} />
+					<Slide link={"/7@2x.webp"} onClick={onImage3Click} className={styles.smeyana} />
+					<Slide link={"/4@2x.webp"} onClick={onImageClick} className={styles.ant} />
+					<Slide link={"/5@2x.webp"} onClick={onImage1Click} className={styles.yasker} />
 				</div>
 				<Border className={clsx(styles.border, styles.bottom)} />
 			</div>

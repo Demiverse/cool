@@ -12,12 +12,12 @@ const Component: FunctionComponent = () => {
 
 	return (
 		<div className={styles.page}>
-			<img className={styles.background} alt="" src="/f-3-22@2x.png" />
+			<img className={styles.background} src="/f-3-22@2x-light.png" />
 			<Header />
 			<div className={styles.container}>
 				<div className={styles.wrapper}>
 					<div className={styles.preloader2}>
-						<img className={styles.child} alt="" src="/rectangle-221@2x.png" />
+						<img className={styles.child} src="/rectangle-22@2x-light.png" />
 					</div>
 					<div className={styles.buttonbuylevelnormal2Parent}>
 						<img className={styles.buttonbuylevelnormal2Icon} alt="" src="/buttonbuylevelnormal-2@2x.png" />
@@ -48,7 +48,7 @@ const Component: FunctionComponent = () => {
 					</div>
 				</div>
 			</div>
-			<img className={styles.ant} alt="" src="/--1@2x.png" />
+			<img className={styles.ant} src="/--1@2x.webp" />
 		</div>
 	);
 };
