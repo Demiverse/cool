@@ -3,13 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 import styles from "./Component.module.scss";
 import { Header } from "../../components/header/header";
 
+import useSound from "hooks/useSound";
+import backgroundSound from "./backgroundSound.mp3";
+
 const Component: FunctionComponent = () => {
-	const navigate = useNavigate();
-
-	const onImageClick = useCallback(() => {
-		navigate("/frame-285");
-	}, [navigate]);
-
+	const [muted, { toggleMuteBgSound }] = useSound(backgroundSound);
 	return (
 		<div className={styles.page}>
 			<img className={styles.background} src="/f-3-22@2x-light.png" />

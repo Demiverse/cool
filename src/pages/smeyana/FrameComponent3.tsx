@@ -1,4 +1,6 @@
 import { FunctionComponent, useCallback, useLayoutEffect, useRef } from "react";
+import useSound from "hooks/useSound";
+import backgroundSound from "./backgroundSound.mp3";
 import { Link, useNavigate } from "react-router-dom";
 import { isMobile } from "utils/utils";
 import styles from "./FrameComponent3.module.scss";
@@ -6,6 +8,7 @@ import { useScroll } from "../../hooks/useScroll";
 import { Header } from "../../components/header/header";
 const FrameComponent3: FunctionComponent = () => {
 	const navigate = useNavigate();
+	const [muted, { toggleMuteBgSound }] = useSound(backgroundSound);
 
 	const onArrowLeftHighlighted1ImageClick = useCallback(() => {
 		navigate("/frame-281");

@@ -1,5 +1,7 @@
 import React, { useCallback, useLayoutEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import backgroundSound from "./backgroundSound.mp3";
+import useSound from "hooks/useSound";
 import styles from "./styles.module.scss";
 import { useScroll } from "hooks/useScroll";
 import { Header } from "components/header/header";
@@ -8,6 +10,7 @@ import { clsx } from "utils/utils";
 
 const CharactersPage: React.FC = () => {
 	const navigate = useNavigate();
+	const [muted, { toggleMuteBgSound }] = useSound(backgroundSound);
 
 	const onImageClick = useCallback(() => {
 		navigate("/frame-282");
