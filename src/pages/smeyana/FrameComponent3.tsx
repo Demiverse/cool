@@ -21,17 +21,17 @@ const FrameComponent3: FunctionComponent = () => {
 		if (ref.current) ref.current.scrollTop = scroll;
 	}, []);
 
-	const preloaderSrc = isMobile() ? '3@2x-mob.png' : '3@2x.png';
-	const logoSrc = isMobile() ? 'rectangle-22@2x-mob.png' : 'rectangle-22@2x.png';
+	const preloaderSrc = isMobile() ? '3@2x-mob.png' : '3@2x.webp';
+	const logoSrc = isMobile() ? 'rectangle-22@2x-mob.png' : 'rectangle-22@2x-light.png';
 
 	return (
 		<div className={styles.f32Parent}>
 			<div ref={ref} className={styles.f32Child}>
 				<Header showMenu={false} />
-				<img className={styles.background} alt="" src="/f-3-22@2x.png" />
-				<img className={styles.bgIcon} alt="" src="/bg3@2x.jpg" />
-				<img className={styles.pageLogo} alt="" src={`/${logoSrc}`} />
-				<img className={styles.divIcon} alt="" src="/div@2x.png" />
+				<img className={styles.background} src="/f-3-22@2x-cropped.webp" />
+				<img className={styles.bgIcon} src="/bg3@2x.webp" />
+				<img className={styles.pageLogo} src={`/${logoSrc}`} />
+				<img className={styles.divIcon} src="/div@2x.webp" />
 				<div className={styles.character}>
 					<div className={styles.creator}>Художник: Sandra Verenim</div>
 					<div className={styles.name}>Смеяна</div>
@@ -48,12 +48,12 @@ const FrameComponent3: FunctionComponent = () => {
 					</div>
 				</div>
 				<div className={styles.preloader}>
-					<img className={styles.ant} alt="" src={`/${preloaderSrc}`} />
+					<img className={styles.ant} src={`/${preloaderSrc}`} />
 				</div>
 				<div className={styles.arrowlefthighlighted1Icon} onClick={onArrowLeftHighlighted1ImageClick} />
 				<div className={styles.arrowleftnormal1Icon} onClick={onArrowLeftNormal1ImageClick} />
-				<img className={styles.divIcon1} alt="" src="/div@2x.png" />
-				{isMobile() && <img className={styles.divIcon2} alt="" src="/div@2x.png" />}
+				<img className={styles.divIcon1} src="/div@2x.webp" />
+				{isMobile() && <img className={styles.divIcon2} src="/div@2x.webp" />}
 			</div>
 		</div>
 	);
