@@ -1,9 +1,9 @@
 import { FunctionComponent } from "react";
-import styles from "./Component.module.scss";
-import { Header } from "../../components/header/header";
-import MuteButton from "components/muteButton/MuteButton";
 import useSound from "hooks/useSound";
 import backgroundSound from "./backgroundSound.mp3";
+import { Header } from "../../components/header/header";
+import MuteButton from "components/muteButton/MuteButton";
+import styles from "./Component.module.scss";
 
 const Component: FunctionComponent = () => {
 	const [muted, { toggleMuteBgSound }] = useSound(backgroundSound);
@@ -17,10 +17,6 @@ const Component: FunctionComponent = () => {
 					<div className={styles.preloader2}>
 						<img className={styles.child} src="/rectangle-22@2x-light.png" />
 					</div>
-					<div className={styles.buttonbuylevelnormal2Parent}>
-						<img className={styles.buttonbuylevelnormal2Icon} alt="" src="/buttonbuylevelnormal-2@2x.png" />
-						<div className={styles.div7}>Играть</div>
-					</div>
 					<div className={styles.preloader}>
 						<div className={styles.text}>
 							<p>
@@ -28,7 +24,6 @@ const Component: FunctionComponent = () => {
 								обдувает героя Сарнаута и аромат цветов щекочет ноздри. А буйная растительность
 								скрывает, судя по звукам... Кхм, пожалуй, отойдём и не будем мешать...
 							</p>
-
 							<p>
 								Тропический аллод, принадлежащий Дому ди Делис, полон множеством тайн и готов поделиться
 								кое-какими из них. Ведь это место пропитано романтикой, гедонизмом и кулуарными
@@ -36,7 +31,6 @@ const Component: FunctionComponent = () => {
 								решила воспользоваться поводом и собрать влиятельных лиц Сарнаута именно здесь. И герой
 								Сарнаута тоже приглашён.
 							</p>
-
 							<p>
 								Портал alloder.ru анонсирует небольшую игру в жанре визуальной новеллы. В ней вы сможете
 								узнать чуть ближе некоторых, уже известных вам персонажей Сарнаута. Следите за

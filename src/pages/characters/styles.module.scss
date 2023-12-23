@@ -28,6 +28,7 @@
 }
 .containerBackground {
 	z-index: -1;
+	background-color: #250A25;
 }
 
 .content {
@@ -123,6 +124,7 @@
 			aspect-ratio: #{$width} / #{$height};
 			position: relative;
 			overflow-y: hidden;
+			cursor: pointer;
 
 			&:first-child {
 				margin-left: 55px;

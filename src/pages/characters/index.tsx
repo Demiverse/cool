@@ -1,15 +1,15 @@
-import React, { useCallback, useLayoutEffect, useRef } from "react";
+import { FunctionComponent, useCallback, useLayoutEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import backgroundSound from "./backgroundSound.mp3";
 import useSound from "hooks/useSound";
-import styles from "./styles.module.scss";
 import { useScroll } from "hooks/useScroll";
 import { Header } from "components/header/header";
 import MuteButton from "components/muteButton/MuteButton";
 import { Border } from "shared/ui/border";
 import { clsx } from "utils/utils";
+import styles from "./styles.module.scss";
 
-const CharactersPage: React.FC = () => {
+const CharactersPage: FunctionComponent = () => {
 	const navigate = useNavigate();
 	const [muted, { toggleMuteBgSound }] = useSound(backgroundSound);
 
@@ -58,13 +58,6 @@ const CharactersPage: React.FC = () => {
 const Slide = ({ link, className, onClick }: { className?: string; link: string; onClick: () => void }) => (
 	<div className={clsx(styles.slide, className)} onClick={onClick}>
 		<img alt="" src={link} />
-	</div>
-);
-
-const PlayButton = () => (
-	<div className={styles.buttonContainer}>
-		<img className={styles.buttonImage} alt="" src="/buttonbuylevelnormal-2@2x.png" />
-		<div className={styles.buttonText}>Играть</div>
 	</div>
 );
 

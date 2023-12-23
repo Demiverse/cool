@@ -1,12 +1,12 @@
 import { FunctionComponent, useCallback, useLayoutEffect, useRef } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import useSound from "hooks/useSound";
 import backgroundSound from "./backgroundSound.mp3";
-import { Link, useNavigate } from "react-router-dom";
 import { isMobile } from "utils/utils";
-import styles from "./FrameComponent.module.scss";
 import { useScroll } from "../../hooks/useScroll";
 import { Header } from "../../components/header/header";
 import MuteButton from "components/muteButton/MuteButton";
+import styles from "./FrameComponent.module.scss";
 
 const FrameComponent: FunctionComponent = () => {
 	const navigate = useNavigate();
@@ -48,7 +48,7 @@ const FrameComponent: FunctionComponent = () => {
 						его предшественник, скрывает немало тайн, а одна из них напрямую связана с аллодом Игниста.
 					</p>
 					<div className={styles.goBack}>
-						<img className={styles.icons} alt="" src="/icons4.svg" />
+						<img className={styles.icons} src="/icons4.svg" />
 						<Link to="/frame-285">Назад к персонажам</Link>
 					</div>
 				</div>
