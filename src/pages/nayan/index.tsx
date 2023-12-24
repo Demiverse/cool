@@ -36,7 +36,7 @@ const Page: FunctionComponent = () => {
 				<Header showMenu={false} />
 				<MuteButton muted={muted} toggleMuteBgSound={toggleMuteBgSound} />
 				<img className={styles.background} src="/f-3-22@2x-cropped.webp" />
-				<img className={styles.bgIcon} src={`${prefix}/background.webp`} />
+				<img className={styles.characterBackground} src={`${prefix}/background.webp`} />
 				<img className={styles.logo} src={`/${logoSrc}`} />
 				<Border className={styles.topBorder}/>
 				<div className={styles.character}>
