@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { Routes, Route, useNavigationType, useLocation } from "react-router-dom";
-import Component from "./pages/main/Component";
-import FrameComponent from "./pages/yasker/FrameComponent";
-import FrameComponent1 from "./pages/ann/FrameComponent1";
-import FrameComponent2 from "./pages/nayan/FrameComponent2";
-import FrameComponent3 from "./pages/smeyana/FrameComponent3";
+import Main from "./pages/main/Main";
+import { default as Yasker } from "./pages/yasker";
+import { default as Ann } from "./pages/ann";
+import { default as Nayan } from "./pages/nayan";
+import { default as Smeyana } from "./pages/smeyana";
 import CharactersPage from "./pages/characters";
 import { WithScroll } from "./components/scrollcontext";
 
@@ -71,11 +71,11 @@ function App() {
 	return (
 		<WithScroll>
 			<Routes>
-				<Route path="/" element={<Component />} />
-				<Route path="/frame-283" element={<FrameComponent />} />
-				<Route path="/frame-282" element={<FrameComponent1 />} />
-				<Route path="/frame-281" element={<FrameComponent2 />} />
-				<Route path="/frame-280" element={<FrameComponent3 />} />
+				<Route path="/" element={<Main />} />
+				<Route path="/frame-283" element={<Yasker />} />
+				<Route path="/frame-282" element={<Ann />} />
+				<Route path="/frame-281" element={<Nayan />} />
+				<Route path="/frame-280" element={<Smeyana />} />
 				<Route path="/frame-285" element={<CharactersPage />} />
 			</Routes>
 		</WithScroll>
