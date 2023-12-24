@@ -44,10 +44,10 @@ const CharactersPage: FunctionComponent = () => {
 				<div className={styles.containerBackground}></div>
 				<Border className={clsx(styles.border, styles.top)} />
 				<div className={styles.carousel} data-variant={"v2"}>
-					<Slide link={"/6@2x.webp"} onClick={onImage2Click} className={styles.nayan} />
-					<Slide link={"/7@2x.webp"} onClick={onImage3Click} className={styles.smeyana} />
-					<Slide link={"/4@2x.webp"} onClick={onImageClick} className={styles.ant} />
-					<Slide link={"/5@2x.webp"} onClick={onImage1Click} className={styles.yasker} />
+					<Slide link='/characters/nayan/6@2x.webp' onClick={onImage2Click} className={styles.nayan} />
+					<Slide link='/characters/smeyana/7@2x.webp' onClick={onImage3Click} className={styles.smeyana} />
+					<Slide link='/characters/ann/4@2x.webp' onClick={onImageClick} className={styles.ant} />
+					<Slide link='/characters/yasker/5@2x.webp' onClick={onImage1Click} className={styles.yasker} />
 				</div>
 				<Border className={clsx(styles.border, styles.bottom)} />
 			</div>
