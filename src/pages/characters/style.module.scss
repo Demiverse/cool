@@ -1,0 +1,242 @@
+@import "shared/themes/breakpoints";
+
+.page {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-height: 100vh;
+	max-height: 100vh;
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	align-items: stretch;
+	text-align: center;
+	font-size: var(--h6-desktop-size);
+	color: var(--light-100);
+	font-family: var(--h6-desktop);
+	overflow: hidden;
+}
+
+.containerBackground,
+.pageBackground {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.containerBackground {
+	z-index: -1;
+	background-color: #250A25;
+}
+
+.content {
+	flex: 1 1 auto;
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem 0;
+	-webkit-animation: slideIn 0.7s forwards;
+	-moz-animation: slideIn 0.7s forwards;
+	animation: slideIn 0.7s forwards;
+	overflow: hidden; // important for v2 carousel
+}
+
+.carousel {
+	$height: 900;
+	$width: 420;
+
+	flex: 1 1 100%;
+	width: 100%;
+	gap: 2rem;
+	padding: 2rem 1rem;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	.slide {
+		scroll-snap-align: center;
+
+		> img {
+			height: 100%;
+			width: 100%;
+			display: block;
+			border-radius: 0.625rem;
+			object-fit: cover;
+		}
+	}
+
+	&[data-variant="v1"] {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		align-items: stretch;
+
+		.slide {
+			$margin: #{$width + "px"};
+
+			position: relative;
+			max-width: 100%;
+			height: auto;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-items: center;
+			align-items: stretch;
+			padding-left: min(#{$width + "px"}, 100%);
+			cursor: pointer;
+
+			&:first-child {
+				margin-left: $margin;
+			}
+
+			&:last-child {
+				margin-right: $margin;
+			}
+
+			> img {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+
+	&[data-variant="v2"] {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		align-items: stretch;
+
+		.slide {
+			$margin: #{$width + "px"};
+
+			flex: 1 0 min(#{$width + "px"}, 100%);
+			max-width: 100%;
+			height: auto;
+			width: min(#{$width + "px"}, 100%);
+			aspect-ratio: #{$width} / #{$height};
+			position: relative;
+			overflow-y: hidden;
+			cursor: pointer;
+
+			&:first-child {
+				margin-left: 55px;
+			}
+
+			&:last-child {
+				margin-right: 55px;
+			}
+
+			> img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				max-height: 100%;
+				object-position: top;
+			}
+		}
+	}
+}
+
+.ant, .yasker, .nayan, .smeyana {
+	@media (hover:hover) {
+		&:not(.active) {
+			filter: brightness(22%);
+			transition: 1s;
+		}
+		&:hover {
+			mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.6) 30%, #000 50%, rgba(0, 0, 0, 0.6) 70%);
+			mask-size: 200%;
+			animation: wave 2s infinite;
+			filter: brightness(100%);
+			transition: 1s;
+		}
+	}
+}
+
+.border {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 25px;
+
+	&.top {
+		top: 0;
+	}
+
+	&.bottom {
+		bottom: 0;
+	}
+}
+
+.buttonContainer {
+	position: absolute;
+	top: 143px;
+	left: 890px;
+	width: 141px;
+	height: 41px;
+	display: none;
+	color: var(--secondary-100);
+
+	.buttonImage {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 141px;
+		height: 41px;
+		object-fit: cover;
+	}
+	.buttonText {
+		position: absolute;
+		top: 9px;
+		left: 37px;
+		line-height: 120%;
+	}
+}
+
+@-webkit-keyframes slideIn {
+	0% {
+		transform: translateY(900px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+@-moz-keyframes slideIn {
+	0% {
+		transform: translateY(900px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+@keyframes slideIn {
+	0% {
+		transform: translateY(900px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes wave {
+	from {
+		-webkit-mask-position: 150%;
+	}
+	to {
+		-webkit-mask-position: -50%;
+	}
+}
+
+@include smartBreakpointByType(max, sm) {
+	.pageBackground {
+		height: 220px;
+	}
+}
