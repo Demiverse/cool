@@ -7,7 +7,7 @@ import { Header } from "components/header/header";
 import MuteButton from "components/muteButton/MuteButton";
 import { Border } from "shared/ui/border";
 import { clsx } from "utils/utils";
-import styles from "./styles.module.scss";
+import styles from "./style.module.scss";
 
 const CharactersPage: FunctionComponent = () => {
 	const navigate = useNavigate();
