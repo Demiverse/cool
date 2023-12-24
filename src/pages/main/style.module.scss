@@ -44,6 +44,7 @@
 	align-items: center;
 	flex: 1 1 auto;
 	overflow-y: auto;
+	overflow-x: hidden;
 	mask-border-mode: alpha;
 	mask-image: linear-gradient(to bottom, transparent, #000 2rem, #000 calc(100% - 2rem), transparent);
 
