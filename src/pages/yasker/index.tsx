@@ -40,7 +40,10 @@ const Page: FunctionComponent = () => {
 				</header>
 				<Border className={styles.topBorder} />
 				<main className={styles.character}>
-					<img className={styles.background} src={`${prefix}/background.webp`} />
+					<img
+						className={styles.background}
+						src={`${prefix}/background${isMobile() && '-mob'}.webp`}
+					/>
 					<div className={styles.about}>
 						<div className={styles.creator}>Художник: UNGOODEST</div>
 						<div className={styles.name}>Яскер</div>
@@ -62,9 +65,9 @@ const Page: FunctionComponent = () => {
 						</div>
 						<div className={clsx(styles.goNext, styles.arrow)} onClick={handleGoNextPage} />
 					</div>
+					{ isMobile() && <Border className={styles.middleBorder}/> }
 				</main>
 				<Border className={styles.bottomBorder} />
-				{ isMobile() && <Border className={styles.mobileBorder}/> }
 				<MuteButton muted={muted} toggleMuteBgSound={toggleMuteBgSound} />
 			</div>
 		</div>

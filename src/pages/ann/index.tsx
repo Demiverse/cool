@@ -9,8 +9,9 @@ import MuteButton from "components/muteButton/MuteButton";
 import { Border } from "shared/ui/border";
 import { clsx } from "utils/utils";
 import styles from "../character.module.scss";
-
+var count = 0;
 const Page: FunctionComponent = () => {
+	console.log(`component rendered ${count++} times`)
 	const navigate = useNavigate();
 	const [muted, { toggleMuteBgSound }] = useSound(backgroundSound);
 
@@ -40,7 +41,10 @@ const Page: FunctionComponent = () => {
 				</header>
 				<Border className={styles.topBorder} />
 				<main className={styles.character}>
-					<img className={styles.background} src={`${prefix}/background.webp`} />
+					<img
+						className={styles.background}
+						src={`${prefix}/background${isMobile() && '-mob'}.webp`}
+					/>
 					<div className={styles.about}>
 						<div className={styles.creator}>Художник: Opium Witch</div>
 						<div className={styles.name}>Антуанетта</div>
@@ -62,9 +66,9 @@ const Page: FunctionComponent = () => {
 						</div>
 						<div className={clsx(styles.goNext, styles.arrow)} onClick={handleGoNextPage} />
 					</div>
+					{ isMobile() && <Border className={styles.middleBorder}/> }
 				</main>
 				<Border className={styles.bottomBorder} />
-				{ isMobile() && <Border className={styles.mobileBorder}/> }
 				<MuteButton muted={muted} toggleMuteBgSound={toggleMuteBgSound} />
 			</div>
 		</div>
