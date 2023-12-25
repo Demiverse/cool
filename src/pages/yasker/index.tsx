@@ -4,21 +4,22 @@ import useSound from "hooks/useSound";
 import backgroundSound from "./backgroundSound.mp3";
 import { isMobile } from "utils/utils";
 import { useScroll } from "../../hooks/useScroll";
-import { Header } from "../../components/header/header";
+import { Navigation } from "components/navigation/navigation";
 import MuteButton from "components/muteButton/MuteButton";
 import { Border } from "shared/ui/border";
+import { clsx } from "utils/utils";
 import styles from "../character.module.scss";
 
 const Page: FunctionComponent = () => {
 	const navigate = useNavigate();
 	const [muted, { toggleMuteBgSound }] = useSound(backgroundSound);
 
-	const onArrowLeftHighlighted1ImageClick = useCallback(() => {
-		navigate("/frame-280");
+	const handleGoPrevPage = useCallback(() => {
+		navigate("/smeyana");
 	}, [navigate]);
 
-	const onArrowLeftNormal1ImageClick = useCallback(() => {
-		navigate("/frame-282");
+	const handleGoNextPage = useCallback(() => {
+		navigate("/ann");
 	}, [navigate]);
 
 	const ref = useRef<HTMLDivElement>(null);
@@ -27,39 +28,44 @@ const Page: FunctionComponent = () => {
 		if (ref.current) ref.current.scrollTop = scroll;
 	}, []);
 
-	const prefix = '/characters/yasker';
-	const logoSrc = isMobile() ? 'rectangle-22@2x-mob.png' : 'rectangle-22@2x-light.png';
+	let prefix = '/characters/yasker';
+	let logoSrc = isMobile() ? 'rectangle-22@2x-mob.png' : 'rectangle-22@2x-light.png';
 
 	return (
 		<div className={styles.page}>
 			<div ref={ref} className={styles.container}>
-				<Header showMenu={false} />
-				<MuteButton muted={muted} toggleMuteBgSound={toggleMuteBgSound} />
-				<img className={styles.background} src="/f-3-22@2x-cropped.webp" />
-				<img className={styles.characterBackground} src={`${prefix}/background.webp`} />
-				<img className={styles.logo} src={`/${logoSrc}`} />
-				<Border className={styles.topBorder}/>
-				<div className={styles.character}>
-					<div className={styles.creator}>Художник: UNGOODEST</div>
-					<div className={styles.name}>Яскер</div>
-					<p className={styles.about}>
-						Яскер — вождь хадаганской нации, непоколебимый глава Империи и народный любимец. Его непреклонность
-						и верность сравнима лишь с Великим Незебом, который положил начало государству и впоследствии
-						оставил своего преемника, способного стать продолжателем его дела. Всё бы ничего, но Яскер, как и
-						его предшественник, скрывает немало тайн, а одна из них напрямую связана с аллодом Игниста.
-					</p>
-					<div className={styles.goBack}>
-						<img className={styles.icons} src="/icons4.svg" />
-						<Link to="/frame-285">Назад к персонажам</Link>
+				<header className={styles.header}>
+					<Navigation showMenu={false} />
+					<img className={styles.logo} src={`/${logoSrc}`} />
+				</header>
+				<Border className={styles.topBorder} />
+				<main className={styles.character}>
+					<img className={styles.background} src={`${prefix}/background.webp`} />
+					<div className={styles.about}>
+						<div className={styles.creator}>Художник: UNGOODEST</div>
+						<div className={styles.name}>Яскер</div>
+						<p className={styles.text}>
+							Яскер — вождь хадаганской нации, непоколебимый глава Империи и народный любимец. Его непреклонность
+							и верность сравнима лишь с Великим Незебом, который положил начало государству и впоследствии
+							оставил своего преемника, способного стать продолжателем его дела. Всё бы ничего, но Яскер, как и
+							его предшественник, скрывает немало тайн, а одна из них напрямую связана с аллодом Игниста.
+						</p>
+						<div className={styles.goBack}>
+							<img src="/icons4.svg" />
+							<Link to="/characters">Назад к персонажам</Link>
+						</div>
 					</div>
-				</div>
-				<div className={styles.avatar}>
-					<img src={`${prefix}/own-page-avatar.png`} />
-				</div>
-				<div className={styles.prev} onClick={onArrowLeftHighlighted1ImageClick} />
-				<div className={styles.next} onClick={onArrowLeftNormal1ImageClick} />
-				<Border className={styles.bottomBorder}/>
+					<div className={styles.avatar}>
+						<div className={clsx(styles.goPrev, styles.arrow)} onClick={handleGoPrevPage} />
+						<div className={styles.image}>
+							<img loading="eager" src={`${prefix}/own-page-avatar.png`} />
+						</div>
+						<div className={clsx(styles.goNext, styles.arrow)} onClick={handleGoNextPage} />
+					</div>
+				</main>
+				<Border className={styles.bottomBorder} />
 				{ isMobile() && <Border className={styles.mobileBorder}/> }
+				<MuteButton muted={muted} toggleMuteBgSound={toggleMuteBgSound} />
 			</div>
 		</div>
 	);

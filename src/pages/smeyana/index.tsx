@@ -4,21 +4,22 @@ import useSound from "hooks/useSound";
 import backgroundSound from "./backgroundSound.mp3";
 import { isMobile } from "utils/utils";
 import { useScroll } from "../../hooks/useScroll";
-import { Header } from "../../components/header/header";
+import { Navigation } from "../../components/navigation/navigation";
 import MuteButton from "components/muteButton/MuteButton";
 import { Border } from "shared/ui/border";
+import { clsx } from "utils/utils";
 import styles from "../character.module.scss";
 
 const Page: FunctionComponent = () => {
 	const navigate = useNavigate();
 	const [muted, { toggleMuteBgSound }] = useSound(backgroundSound);
 
-	const onArrowLeftHighlighted1ImageClick = useCallback(() => {
-		navigate("/frame-281");
+	const handleGoPrevPage = useCallback(() => {
+		navigate("/nayan");
 	}, [navigate]);
 
-	const onArrowLeftNormal1ImageClick = useCallback(() => {
-		navigate("/frame-283");
+	const handleGoNextPage = useCallback(() => {
+		navigate("/yasker");
 	}, [navigate]);
 
 	const ref = useRef<HTMLDivElement>(null);
@@ -27,40 +28,45 @@ const Page: FunctionComponent = () => {
 		if (ref.current) ref.current.scrollTop = scroll;
 	}, []);
 
-	const prefix = '/characters/smeyana';
-	const logoSrc = isMobile() ? 'rectangle-22@2x-mob.png' : 'rectangle-22@2x-light.png';
+	let prefix = '/characters/smeyana';
+	let logoSrc = isMobile() ? 'rectangle-22@2x-mob.png' : 'rectangle-22@2x-light.png';
 
 	return (
 		<div className={styles.page}>
 			<div ref={ref} className={styles.container}>
-				<Header showMenu={false} />
-				<MuteButton muted={muted} toggleMuteBgSound={toggleMuteBgSound} />
-				<img className={styles.background} src="/f-3-22@2x-cropped.webp" />
-				<img className={styles.characterBackground} src={`${prefix}/background.webp`} />
-				<img className={styles.logo} src={`/${logoSrc}`} />
-				<Border className={styles.topBorder}/>
-				<div className={styles.character}>
-					<div className={styles.creator}>Художник: Sandra Verenim</div>
-					<div className={styles.name}>Смеяна</div>
-					<p className={styles.about}>
-						Великая Волшебница Смеяна по праву считается одним из флагманов техномагического развития Сарнаута.
-						Изобретения из её мастерских пользуются популярностью во всём мире.<br/>Даже лапотники из дальних
-						канийских деревень слышали об этой женщине властных нравов.<br />По слухам, Владычица имеет свои
-						академии, где вход открыт лишь для канийских девиц. И она хотела бы распространять образование и
-						дальше — чтобы искоренить невежество среди простого люда.
-					</p>
-					<div className={styles.goBack}>
-						<img className={styles.icons} src="/icons4.svg" />
-						<Link to="/frame-285">Назад к персонажам</Link>
+				<header className={styles.header}>
+					<Navigation showMenu={false} />
+					<img className={styles.logo} src={`/${logoSrc}`} />
+				</header>
+				<Border className={styles.topBorder} />
+				<main className={styles.character}>
+					<img className={styles.background} src={`${prefix}/background.webp`} />
+					<div className={styles.about}>
+						<div className={styles.creator}>Художник: Sandra Verenim</div>
+						<div className={styles.name}>Смеяна</div>
+						<p className={styles.text}>
+							Великая Волшебница Смеяна по праву считается одним из флагманов техномагического развития Сарнаута.
+							Изобретения из её мастерских пользуются популярностью во всём мире.<br/>Даже лапотники из дальних
+							канийских деревень слышали об этой женщине властных нравов.<br />По слухам, Владычица имеет свои
+							академии, где вход открыт лишь для канийских девиц. И она хотела бы распространять образование и
+							дальше — чтобы искоренить невежество среди простого люда.
+						</p>
+						<div className={styles.goBack}>
+							<img src="/icons4.svg" />
+							<Link to="/characters">Назад к персонажам</Link>
+						</div>
 					</div>
-				</div>
-				<div className={styles.avatar}>
-					<img src={`${prefix}/own-page-avatar.png`} />
-				</div>
-				<div className={styles.prev} onClick={onArrowLeftHighlighted1ImageClick} />
-				<div className={styles.next} onClick={onArrowLeftNormal1ImageClick} />
-				<Border className={styles.bottomBorder}/>
+					<div className={styles.avatar}>
+						<div className={clsx(styles.goPrev, styles.arrow)} onClick={handleGoPrevPage} />
+						<div className={styles.image}>
+							<img loading="eager" src={`${prefix}/own-page-avatar.png`} />
+						</div>
+						<div className={clsx(styles.goNext, styles.arrow)} onClick={handleGoNextPage} />
+					</div>
+				</main>
+				<Border className={styles.bottomBorder} />
 				{ isMobile() && <Border className={styles.mobileBorder}/> }
+				<MuteButton muted={muted} toggleMuteBgSound={toggleMuteBgSound} />
 			</div>
 		</div>
 	);
