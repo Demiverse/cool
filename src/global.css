@@ -15,9 +15,8 @@ body {
 	--text-normal: "Open Sans";
 
 	/* font sizes */
-	--h6-desktop-size: 20px;
-	--h1-desktop-size: 48px;
-	--h1-mobile-size: 24px;
+	--h1-desktop-size: clamp(24px, 2.5vw, 48px);
+	--h6-desktop-size: clamp(14px, 2vw, 20px);
 	--text-normal-size: 16px;
 
 	/* Colors */

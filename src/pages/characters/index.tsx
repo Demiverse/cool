@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import backgroundSound from "./backgroundSound.mp3";
 import useSound from "hooks/useSound";
 import { useScroll } from "hooks/useScroll";
-import { Header } from "components/header/header";
+import { Navigation } from "components/navigation/navigation";
 import MuteButton from "components/muteButton/MuteButton";
 import { Border } from "shared/ui/border";
 import { clsx } from "utils/utils";
@@ -14,19 +14,19 @@ const CharactersPage: FunctionComponent = () => {
 	const [muted, { toggleMuteBgSound }] = useSound(backgroundSound);
 
 	const onImageClick = useCallback(() => {
-		navigate("/frame-282");
+		navigate("/ann");
 	}, [navigate]);
 
 	const onImage1Click = useCallback(() => {
-		navigate("/frame-283");
+		navigate("/yasker");
 	}, [navigate]);
 
 	const onImage2Click = useCallback(() => {
-		navigate("/frame-281");
+		navigate("/nayan");
 	}, [navigate]);
 
 	const onImage3Click = useCallback(() => {
-		navigate("/frame-280");
+		navigate("/smeyana");
 	}, [navigate]);
 
 	const ref = useRef<HTMLDivElement>(null);
@@ -37,8 +37,8 @@ const CharactersPage: FunctionComponent = () => {
 
 	return (
 		<div className={styles.page}>
-			<img className={styles.pageBackground} alt="" src="/f-3-22@2x-cropped.webp" />
-			<Header />
+			<img className={styles.pageBackground} src="/f-3-22@2x-cropped.webp" />
+			<Navigation />
 			<MuteButton muted={muted} toggleMuteBgSound={toggleMuteBgSound} />
 			<div className={styles.content}>
 				<div className={styles.containerBackground}></div>
@@ -46,7 +46,7 @@ const CharactersPage: FunctionComponent = () => {
 				<div className={styles.carousel} data-variant={"v2"}>
 					<Slide link='/characters/nayan/6@2x.webp' onClick={onImage2Click} className={styles.nayan} />
 					<Slide link='/characters/smeyana/7@2x.webp' onClick={onImage3Click} className={styles.smeyana} />
-					<Slide link='/characters/ann/4@2x.webp' onClick={onImageClick} className={styles.ant} />
+					<Slide link='/characters/ann/4@2x.webp' onClick={onImageClick} className={styles.ann} />
 					<Slide link='/characters/yasker/5@2x.webp' onClick={onImage1Click} className={styles.yasker} />
 				</div>
 				<Border className={clsx(styles.border, styles.bottom)} />
