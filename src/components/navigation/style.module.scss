@@ -1,0 +1,95 @@
+@import "shared/themes/breakpoints";
+
+.nav {
+	position: relative;
+	padding: 1.5rem 3rem;
+	font-family: AllodsWest;
+	font-size: var(--h6-desktop-size);
+	line-height: 120%;
+	z-index: 2;
+
+	&.withoutMenu {
+		width: 100%;
+		backdrop-filter: blur(0);
+		background: transparent;
+	}
+
+	.visitSite {
+		display: flex;
+		align-items: center;
+		color: #FFF;
+		gap: var(--gap-9xs);
+
+		.icons {
+			position: relative;
+			width: 16px;
+			height: 16px;
+			overflow: hidden;
+			flex-shrink: 0;
+		}
+	}
+
+	.link {
+		color: rgba(196, 196, 196, 0.7);
+		user-select: none;
+	}
+
+	.link a {
+		color: rgba(196, 196, 196, 0.7);
+		text-decoration: none;
+	}
+	
+	.link:hover,
+	.link a:hover {
+		color: white;
+	}
+
+	.link.active,
+	.link.active a {
+		color: white;
+	}
+
+	.link.disabled {
+		color: white;
+		opacity: 0.5;
+		cursor: default;
+		pointer-events: none;
+	}
+
+	.menu {
+		position: absolute;
+		top: 1.5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: var(--gap-29xl);
+	}
+}
+
+@include smartBreakpointByType(min, sm) {
+	.nav {
+		background: linear-gradient(to bottom, rgba(0,0,0,.5) 80%, transparent);
+		backdrop-filter: blur(1rem);
+	}
+}
+
+@include smartBreakpointByType(max, sm) {
+	.nav {
+		display: flex;
+		padding: 1rem;
+
+		.icons {
+			width: 14px;
+			height: 14px;
+		}
+
+		.menu {
+			position: static;
+			transform: translateX(0);
+			margin-left: auto;
+			gap: var(--gap-5xs);
+		}
+	}
+}

@@ -7,25 +7,25 @@ interface Props {
 	showMenu?: boolean;
 }
 
-export const Header: FunctionComponent<Props> = ({ showMenu = true }) => {
+export const Navigation: FunctionComponent<Props> = ({ showMenu = true }) => {
 	const isActiveLink: (a: { isActive: boolean }) => string = ({ isActive }) =>
 		clsx(style.link, isActive && style.active);
 	return (
-		<div className={style.header}>
-			<div className={style.div7} style={{ color: "white" }}>
-				<img className={style.icons} alt="" src="/icons4.svg" />
-					<a
-						className={clsx(style.link, style.active, style.div8)}
-						href="https://alloder.ru">
-						Назад на сайт
-					</a>
+		<div className={clsx(style.nav, !showMenu && style.withoutMenu)}>
+			<div className={style.visitSite}>
+				<img className={style.icons} src="/icons4.svg" />
+				<a
+					className={clsx(style.link, style.active)}
+					href="https://alloder.ru">
+					Назад на сайт
+				</a>
 			</div>
 			{showMenu && (
 				<div className={style.menu}>
 					<NavLink to="/" className={isActiveLink}>
 						Главная
 					</NavLink>
-					<NavLink to="/frame-285" className={isActiveLink}>
+					<NavLink to="/characters" className={isActiveLink}>
 						Персонажи
 					</NavLink>
 				</div>
