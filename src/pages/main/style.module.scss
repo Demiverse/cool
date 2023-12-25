@@ -75,7 +75,7 @@
 	
 		p {
 			font-family: AllodsWest;
-			font-size: 20px;
+			font-size: var(--h6-desktop-size);
 			font-weight: 400;
 			font-style: normal;
 			line-height: 120%;
@@ -141,8 +141,8 @@
 	}
 }
 
-@include smartBreakpointByType(max, sm) {
-	.text {
-		font-size: 16px;
+@include smartBreakpointByType(max, lg) {
+	.container {
+		max-width: 94%;
 	}
 }
