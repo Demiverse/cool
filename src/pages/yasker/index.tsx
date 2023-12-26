@@ -29,6 +29,7 @@ const Page: FunctionComponent = () => {
 	}, []);
 
 	let prefix = '/characters/yasker';
+	let backgroundPath = `/background${isMobile() ? '-mob' : ''}.webp`;
 	let logoSrc = isMobile() ? 'rectangle-22@2x-mob.png' : 'rectangle-22@2x-light.png';
 
 	return (
@@ -42,7 +43,7 @@ const Page: FunctionComponent = () => {
 				<main className={styles.character}>
 					<img
 						className={styles.background}
-						src={`${prefix}/background${isMobile() && '-mob'}.webp`}
+						src={`${prefix}${backgroundPath}`}
 					/>
 					<div className={styles.about}>
 						<div className={styles.creator}>Художник: UNGOODEST</div>
