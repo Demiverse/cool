@@ -18,4 +18,4 @@ export const clsx: (...classNames: (any | any[] | { [classNames: string]: any })
 		.filter((className) => !!className)
 		.join(" ");
 
-export const isMobile = ():boolean => window.matchMedia('(width <= 480px)').matches;
+export const isMobile = ():boolean => window.matchMedia('(width < 992px)').matches;
