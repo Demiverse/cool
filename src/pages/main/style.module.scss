@@ -146,3 +146,9 @@
 		max-width: 94%;
 	}
 }
+
+@media (992px >= width >= 768px) {
+	.container {
+		max-width: 80%;
+	}
+}
