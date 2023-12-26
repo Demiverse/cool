@@ -43,10 +43,11 @@
 	justify-content: center;
 	align-items: center;
 	padding: 2rem 0;
+	background-color: #250A25;
+	overflow: hidden; // important for v2 carousel
 	-webkit-animation: slideIn 0.7s forwards;
 	-moz-animation: slideIn 0.7s forwards;
 	animation: slideIn 0.7s forwards;
-	overflow: hidden; // important for v2 carousel
 }
 
 .carousel {
