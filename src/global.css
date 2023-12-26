@@ -42,12 +42,21 @@ body {
 
 	/* Element sizes */
 	--section-mob-height: 500px;
-	--header-mob-height: 150px;
+	--header-mob-height: max(120px, 14vh);
 	--divider-height: 25px;
+	--mute-button-size: 48px;
+	--change-character-arrow-size: 70px;
+}
+
+@media (992px >= width) {
+	:root {
+		--mute-button-size: 32px;
+		--change-character-arrow-size: 35px;
+	}
 }
 
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 a {
