@@ -13,7 +13,7 @@
 	left: 0;
 	display: flex;
 	user-select: none;
-	background: url('/../public/frame-283@3x.webp') top / cover no-repeat;
+	background: url('/../public/characters/character-page-background.webp') top / cover no-repeat;
 }
 
 .container {
@@ -38,7 +38,7 @@
 		align-items: center;
 		flex-shrink: 0;
 		position: relative;
-		background: url('/../public/f-3-22@2x-cropped.webp') center / cover no-repeat;
+		background: url('/../public/header-background.webp') center / cover no-repeat;
 		
 		.logo {
 			width: 100%;
