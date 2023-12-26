@@ -23,6 +23,8 @@
 
 @include smartBreakpointByType(max, lg) {
   .bgSoundControl {
+    right: 15px;
+    left: auto;
     width: 32px;
     height: 32px;
   }
