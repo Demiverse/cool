@@ -57,8 +57,8 @@ body {
 
 @media (width > 1920px) {
 	:root {
-		--h1-desktop-size: clamp(48px, 2.5vw, 52px);
-		--h6-desktop-size: clamp(20px, 2vw, 22px);
+		--h1-desktop-size: clamp(48px, 2.5vw, 54px);
+		--h6-desktop-size: clamp(20px, 2vw, 130%);
 	}
 }
 
