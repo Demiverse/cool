@@ -37,11 +37,10 @@ const CharactersPage: FunctionComponent = () => {
 
 	return (
 		<div className={styles.page}>
-			<img className={styles.pageBackground} src="/f-3-22@2x-cropped.webp" />
+			<img className={styles.headerBackground} src="/header-background.webp" />
 			<Navigation />
 			<MuteButton muted={muted} toggleMuteBgSound={toggleMuteBgSound} />
 			<div className={styles.content}>
-				<div className={styles.containerBackground}></div>
 				<Border className={clsx(styles.border, styles.top)} />
 				<div className={styles.carousel} data-variant={"v2"}>
 					<Slide link='/characters/nayan/6@2x.webp' onClick={onImage2Click} className={styles.nayan} />

@@ -14,7 +14,7 @@ const Main: FunctionComponent = () => {
 			<img className={styles.fairy} src="/--1@2x.webp" />
 			<div className={styles.container}>
 				<div className={styles.logo}>
-					<img src="/rectangle-22@2x-light.png" />
+					<img src="/logo.webp" />
 				</div>
 				<div className={styles.content}>
 					<p>

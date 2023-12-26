@@ -9,9 +9,8 @@ import MuteButton from "components/muteButton/MuteButton";
 import { Border } from "shared/ui/border";
 import { clsx } from "utils/utils";
 import styles from "../character.module.scss";
-var count = 0;
+
 const Page: FunctionComponent = () => {
-	console.log(`component rendered ${count++} times`)
 	const navigate = useNavigate();
 	const [muted, { toggleMuteBgSound }] = useSound(backgroundSound);
 
@@ -31,14 +30,14 @@ const Page: FunctionComponent = () => {
 
 	let prefix = '/characters/ann';
 	let backgroundPath = `/background${isMobile() ? '-mob' : ''}.webp`;
-	let logoSrc = isMobile() ? 'rectangle-22@2x-mob.png' : 'rectangle-22@2x-light.png';
+	let logoPath = `/logo${isMobile() ? '-mob' : ''}.webp`;
 	
 	return (
 		<div className={styles.page}>
 			<div ref={ref} className={styles.container}>
 				<header className={styles.header}>
 					<Navigation showMenu={false} />
-					<img className={styles.logo} src={`/${logoSrc}`} />
+					<img className={styles.logo} src={`${logoPath}`} />
 				</header>
 				<Border className={styles.topBorder} />
 				<main className={styles.character}>
