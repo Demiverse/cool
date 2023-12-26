@@ -37,7 +37,6 @@ const CharactersPage: FunctionComponent = () => {
 
 	return (
 		<div className={styles.page}>
-			<img className={styles.headerBackground} src="/header-background.webp" />
 			<Navigation />
 			<MuteButton muted={muted} toggleMuteBgSound={toggleMuteBgSound} />
 			<div className={styles.content}>

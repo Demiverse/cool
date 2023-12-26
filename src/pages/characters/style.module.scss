@@ -16,7 +16,8 @@
 	align-items: stretch;
 	
 	overflow: hidden;
-	background-color: #250A25;
+	background: url("/../public/main-page-background.webp") center / cover no-repeat;
+	background-attachment: fixed;
 }
 
 .containerBackground,
