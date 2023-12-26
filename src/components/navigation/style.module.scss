@@ -2,7 +2,7 @@
 
 .nav {
 	position: relative;
-	padding: 1.5rem 3rem;
+	padding: 1.5rem calc(1rem + 55px);
 	font-family: AllodsWest;
 	font-size: var(--h6-desktop-size);
 	line-height: 120%;
@@ -75,14 +75,16 @@
 	}
 }
 
-@include smartBreakpointByType(max, sm) {
+@include smartBreakpointByType(max, lg) {
 	.nav {
 		display: flex;
 		padding: 1rem;
-
-		.icons {
-			width: 14px;
-			height: 14px;
+		
+		.visitSite {
+			.icons {
+				width: 14px;
+				height: 14px;
+			}
 		}
 
 		.menu {
