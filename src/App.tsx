@@ -7,6 +7,7 @@ import { default as Nayan } from "./pages/nayan";
 import { default as Smeyana } from "./pages/smeyana";
 import Characters from "./pages/characters";
 import { WithScroll } from "./components/scrollcontext";
+import { AudioProvider } from "./shared/providers/audio";
 
 function App() {
 	const action = useNavigationType();
@@ -69,16 +70,18 @@ function App() {
 	}, [pathname]);
 
 	return (
-		<WithScroll>
-			<Routes>
-				<Route path="/" element={<Main />} />
-				<Route path="/yasker" element={<Yasker />} />
-				<Route path="/ann" element={<Ann />} />
-				<Route path="/nayan" element={<Nayan />} />
-				<Route path="/smeyana" element={<Smeyana />} />
-				<Route path="/characters" element={<Characters />} />
-			</Routes>
-		</WithScroll>
+		<AudioProvider>
+			<WithScroll>
+				<Routes>
+					<Route path="/" element={<Main />} />
+					<Route path="/yasker" element={<Yasker />} />
+					<Route path="/ann" element={<Ann />} />
+					<Route path="/nayan" element={<Nayan />} />
+					<Route path="/smeyana" element={<Smeyana />} />
+					<Route path="/characters" element={<Characters />} />
+				</Routes>
+			</WithScroll>
+		</AudioProvider>
 	);
 }
 export default App;
