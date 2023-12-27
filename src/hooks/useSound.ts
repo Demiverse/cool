@@ -8,7 +8,7 @@ const useSound = (src: string) => {
 	audioRef.current.muted = muted;
 
 	useEffect(() => {
-		if (audioRef.current) audioRef.current.play();
+		if (audioRef.current) audioRef.current.play().catch(console.error);
 		return () => {
 			if (audioRef.current) audioRef.current.pause();
 		};
