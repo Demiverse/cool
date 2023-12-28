@@ -3,16 +3,20 @@
 .bgSoundControl {
   width: 48px;
   height: 48px;
-  border-radius: 100%;
+
   position: fixed;
   left: 15px;
   bottom: 48px;
   z-index: 10;
-  border: none;
-  background-color: #FFF;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  cursor: pointer;
+  border: none;
+  border-radius: 100%;
+  background-color: #FFF;
 
   .icon {
     width: 50%;
@@ -23,9 +27,9 @@
 
 @include smartBreakpointByType(max, lg) {
   .bgSoundControl {
-    right: 15px;
-    left: auto;
     width: 32px;
     height: 32px;
+    right: 15px;
+    left: auto;
   }
 }
