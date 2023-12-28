@@ -156,14 +156,28 @@
 				object-fit: cover;
 				background: url('/../public/arrow.png') center / cover no-repeat;
 				transition: background-image 1s ease-in-out;
+
+				&::after {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 100%;
+					background: url('/../public/arrow-active.png') no-repeat center / cover;
+					opacity: 0;
+					transition: opacity 1s ease-in-out;
+				}
+
+				&:hover {
+					&::after {
+						opacity: 1;
+					}
+				}
 			}
 
 			.goNext {
 				transform: scale(-1, 1);
-			}
-
-			.arrow:hover {
-				background-image: url('/../public/arrow-active.png');
 			}
 		}
 	}
@@ -206,13 +220,14 @@
 		}
 
 		.character {
-			padding: 0 4vw;
 			height: auto;
-			flex-direction: column;
 			min-height: var(--section-mob-height);
+			padding: 0 4vw;
+			flex-direction: column;
+			overflow-x: hidden;
 
 			.background {
-				height: calc(100vh - var(--header-mob-height) - var(--divider-height) * 2);
+				height: calc(100vh - var(--header-mob-height) - var(--divider-height) * 2 + var(--blur-value) * 2);
 			}
 
 			.about {
