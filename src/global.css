@@ -15,9 +15,8 @@ body {
 	--text-normal: "Open Sans";
 
 	/* font sizes */
-	--h6-desktop-size: 20px;
-	--h1-desktop-size: 48px;
-	--h1-mobile-size: 24px;
+	--h1-desktop-size: clamp(24px, 2.5vw, 48px);
+	--h6-desktop-size: clamp(14px, 2vw, 20px);
 	--text-normal-size: 16px;
 
 	/* Colors */
@@ -43,12 +42,28 @@ body {
 
 	/* Element sizes */
 	--section-mob-height: 500px;
-	--header-mob-height: 150px;
+	--header-mob-height: max(120px, 14vh);
 	--divider-height: 25px;
+	--mute-button-size: 48px;
+	--change-character-arrow-size: 70px;
+}
+
+@media (992px >= width) {
+	:root {
+		--mute-button-size: 32px;
+		--change-character-arrow-size: 35px;
+	}
+}
+
+@media (width > 1920px) {
+	:root {
+		--h1-desktop-size: clamp(48px, 2.5vw, 54px);
+		--h6-desktop-size: clamp(20px, 2vw, 130%);
+	}
 }
 
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 a {

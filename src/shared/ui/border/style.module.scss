@@ -1,4 +1,9 @@
 .border {
-	height: 1.5rem;
-	background: #000 url("~/public/div@2x.webp") repeat-x scroll center / auto 100%;
+	width: 100%;
+	height: var(--divider-height);
+	flex-shrink: 0;
+	position: relative;
+	z-index: 1;
+	pointer-events: none;
+	background: #000 url("~/public/border.webp") center / auto 100% repeat-x;
 }

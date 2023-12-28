@@ -1,12 +1,12 @@
-import { Routes, Route, useNavigationType, useLocation } from "react-router-dom";
-import Component from "./pages/main/Component";
-import FrameComponent from "./pages/yasker/FrameComponent";
-import FrameComponent1 from "./pages/ann/FrameComponent1";
-import FrameComponent2 from "./pages/nayan/FrameComponent2";
-import FrameComponent3 from "./pages/smeyana/FrameComponent3";
-import CharactersPage from "./pages/characters";
 import { useEffect } from "react";
-import { ScrollProvider, WithScroll } from "./components/scrollcontext";
+import { Routes, Route, useNavigationType, useLocation } from "react-router-dom";
+import Main from "./pages/main";
+import { default as Yasker } from "./pages/yasker";
+import { default as Ann } from "./pages/ann";
+import { default as Nayan } from "./pages/nayan";
+import { default as Smeyana } from "./pages/smeyana";
+import Characters from "./pages/characters";
+import { WithScroll } from "./components/scrollcontext";
 
 function App() {
 	const action = useNavigationType();
@@ -28,19 +28,19 @@ function App() {
 				title = "";
 				metaDescription = "";
 				break;
-			case "/frame-283":
+			case "/yasker":
 				title = "";
 				metaDescription = "";
 				break;
-			case "/frame-282":
+			case "/ann":
 				title = "";
 				metaDescription = "";
 				break;
-			case "/frame-281":
+			case "/nayan":
 				title = "";
 				metaDescription = "";
 				break;
-			case "/frame-280":
+			case "/smeyana":
 				title = "";
 				metaDescription = "";
 				break;
@@ -48,7 +48,7 @@ function App() {
 				title = "";
 				metaDescription = "";
 				break;
-			case "/frame-285":
+			case "/characters":
 				title = "";
 				metaDescription = "";
 				break;
@@ -71,12 +71,12 @@ function App() {
 	return (
 		<WithScroll>
 			<Routes>
-				<Route path="/" element={<Component />} />
-				<Route path="/frame-283" element={<FrameComponent />} />
-				<Route path="/frame-282" element={<FrameComponent1 />} />
-				<Route path="/frame-281" element={<FrameComponent2 />} />
-				<Route path="/frame-280" element={<FrameComponent3 />} />
-				<Route path="/frame-285" element={<CharactersPage />} />
+				<Route path="/" element={<Main />} />
+				<Route path="/yasker" element={<Yasker />} />
+				<Route path="/ann" element={<Ann />} />
+				<Route path="/nayan" element={<Nayan />} />
+				<Route path="/smeyana" element={<Smeyana />} />
+				<Route path="/characters" element={<Characters />} />
 			</Routes>
 		</WithScroll>
 	);

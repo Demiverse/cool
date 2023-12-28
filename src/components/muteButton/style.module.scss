@@ -1,20 +1,35 @@
+@import "shared/themes/breakpoints";
+
 .bgSoundControl {
   width: 48px;
   height: 48px;
-  border-radius: 100%;
+
   position: fixed;
-  left: 24px;
+  left: 15px;
   bottom: 48px;
   z-index: 10;
-  border: none;
-  background-color: #FFF;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
+  cursor: pointer;
+  border: none;
+  border-radius: 100%;
+  background-color: #FFF;
+
   .icon {
-    width: 24px;
-    height: 24px;
+    width: 50%;
+    height: 50%;
     fill: #206ed3;
+  }
+}
+
+@include smartBreakpointByType(max, lg) {
+  .bgSoundControl {
+    width: 32px;
+    height: 32px;
+    right: 15px;
+    left: auto;
   }
 }
