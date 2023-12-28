@@ -56,8 +56,6 @@
 
 @include smartBreakpointByType(min, sm) {
 	.header {
-		background: linear-gradient(to bottom, rgba(0,0,0,.5) 80%, transparent);
-		backdrop-filter: blur(1rem);
 	}
 }
 
@@ -76,5 +74,11 @@
 		transform: translateX(0);
 		margin-left: auto;
 		gap: var(--gap-5xs);
+	}
+}
+@media (min-width: 2560px) {
+	.header {
+		font-size: 30px;
+		top: 10px;
 	}
 }
