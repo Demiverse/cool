@@ -225,6 +225,7 @@
 			padding: 0 4vw;
 			flex-direction: column;
 			overflow-x: hidden;
+			overflow-y: auto;
 
 			.background {
 				height: calc(100vh - var(--header-mob-height) - var(--divider-height) * 2 + var(--blur-value) * 2);
