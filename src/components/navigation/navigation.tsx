@@ -11,6 +11,7 @@ export const Navigation: FunctionComponent<Props> = ({ showMenu = true }) => {
 	const isActiveLink: (a: { isActive: boolean }) => string = ({ isActive }) =>
 		clsx(style.link, isActive && style.active);
 	return (
+
 		<div className={clsx(style.nav, !showMenu && style.withoutMenu)}>
 			<div className={style.visitSite}>
 				<img className={style.icons} src="/icons4.svg" />
@@ -20,6 +21,7 @@ export const Navigation: FunctionComponent<Props> = ({ showMenu = true }) => {
 					Назад на сайт
 				</a>
 			</div>
+
 			{showMenu && (
 				<div className={style.menu}>
 					<NavLink to="/" className={isActiveLink}>
@@ -30,6 +32,11 @@ export const Navigation: FunctionComponent<Props> = ({ showMenu = true }) => {
 					</NavLink>
 				</div>
 			)}
+			<div className={style.container}>
+				<a className={style.playButton} href="https://allod-strasti.ru/">Играть сейчас</a>
+			</div>
 		</div>
 	);
 };
+
+
