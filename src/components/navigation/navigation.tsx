@@ -33,7 +33,7 @@ export const Navigation: FunctionComponent<Props> = ({ showMenu = true }) => {
 				</div>
 			)}
 			<div className={style.container}>
-				<a className={style.playButton} href="https://allod-strasti.ru/">Играть сейчас</a>
+				<a className={style.playButton} href="https://alloder-ru.itch.io/allod-of-passion">Играть сейчас</a>
 			</div>
 		</div>
 	);
